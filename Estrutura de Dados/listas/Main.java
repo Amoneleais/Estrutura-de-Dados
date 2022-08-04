@@ -14,11 +14,9 @@ public class Main {
         //2 - Utilizando Inserção |
         Lista.Inserir(10);
         Lista.Inserir(20);
-        Lista.Inserir(30);
         Lista.Inserir(5);
         Lista.Inserir(1);
         Lista.Inserir(1);
-        Lista.Inserir(200);
         Lista.Inserir(9);
         Lista.Inserir(55);
         Lista.Inserir(70);
