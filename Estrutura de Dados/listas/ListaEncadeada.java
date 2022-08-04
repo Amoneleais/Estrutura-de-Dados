@@ -1,4 +1,4 @@
-package listaencadeadasimples;
+package listas;
 /**
  * ListaEncadeada
  */
