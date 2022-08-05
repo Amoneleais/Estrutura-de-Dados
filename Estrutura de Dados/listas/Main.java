@@ -20,6 +20,7 @@ public class Main {
         Lista.Inserir(9);
         Lista.Inserir(55);
         Lista.Inserir(70);
+        Lista.Inserir(30);
 
         //3 - Utilizando Impressão |
         Lista.Imprimir();
