@@ -61,7 +61,7 @@ public class ListaEncadeada {
         }
     }
 
-    //Imprime os infos da Lista Encadeada
+    //Imprime os Elementos da Lista Encadeada
     public void Imprimir(){
         String lista = " ";
         if(ListaVazia()){
