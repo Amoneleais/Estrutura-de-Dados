@@ -42,9 +42,7 @@ public class ListaEncadeada {
                 }
             }
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
-                System.out.println("\n=======      !ERRO!      =======");
-                System.out.println("     !ELEMENTO INEXISTENTE!     ");
-                System.out.println("======== ============== ========");
+                System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
             }
             anterior = auxiliar;
         }
@@ -58,34 +56,23 @@ public class ListaEncadeada {
                 break;
             }
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
-                System.out.println("\n=======      ERRO!      =======");
-                System.out.println("        !NÃO EXISTENTE!        ");
-                System.out.println("======= =============== =======");
+                System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
             }
         }
     }
 
     //Imprime os infos da Lista Encadeada
     public void Imprimir(){
-        String lista = " [ ";
+        String lista = " ";
         if(ListaVazia()){
-            System.out.println("\n=======      ERRO!      =======");
-            System.out.println("         !LISTA VAZIA!         ");
-            System.out.println("======= =============== =======");
+            System.out.println("\n [ LISTA VAZIA! ]");
         }
         else{
             for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-                if(auxiliar.getProx()==null){
-                    lista += auxiliar.getInfo()+" ]";
-                }
-                else{
-                    lista += auxiliar.getInfo()+", ";
-                }
+                lista += "["+auxiliar.getInfo()+"] ";
             }
-            System.out.println("\n======= Lista Encadeada =======");
-            System.out.println(lista);
+            System.out.println("\n"+lista);
             System.out.println(" Tamanho da Lista: "+tamanho);
-            System.out.println("======= =============== =======");
         }
     }
     
