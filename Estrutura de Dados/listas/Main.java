@@ -19,6 +19,7 @@ public class Main {
         Lista.Inserir(1);
         Lista.Inserir(9);
         Lista.Inserir(55);
+        Lista.Inserir(2590);
         Lista.Inserir(70);
         Lista.Inserir(30);
 
