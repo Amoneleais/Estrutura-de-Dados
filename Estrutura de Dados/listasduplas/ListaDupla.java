@@ -11,21 +11,21 @@ public class ListaDupla {
 
     //Verifica se a lista está vazia
     public boolean ListaVazia(){    
-        return ref == null;
+        return this.ref == null;
     }
 
     //Insere Elemento na Lista Dupla
     public void Inserir(int elemento){
-        if(ref == null){
-            No novo = new No(elemento, null, ref);
-            ref = novo;
-            tamanho++;
+        if(ListaVazia()){
+            No novo = new No(elemento, null,this.ref);
+            this.ref = novo;
+            this.tamanho++;
         }
         else{
-            No novo = new No(elemento, null, ref);
-            ref.setAnterior(novo);
-            ref = novo;
-            tamanho++;  
+            No novo = new No(elemento, null,this.ref);
+            this.ref.setAnterior(novo);
+            this.ref = novo;
+            this.tamanho++;  
         }
     }
 
@@ -56,9 +56,11 @@ public class ListaDupla {
     
     //Buscar Elemento na Lista Dupla
     public void Buscar(int info){
+        int posicao = 0;
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+            posicao++;
             if(auxiliar.getInfo() == info){
-                System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]");
+                System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
                 break;
             }
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
@@ -84,8 +86,8 @@ public class ListaDupla {
                 }
             }
             System.out.println("\n"+lista);
-            System.out.println("\n BUSCANDO O ANTERIOR:\n\n"+listaVolta);
-            System.out.println(" Tamanho da Lista: "+tamanho);
+            System.out.println("\n BUSCANDO NO SENTIDO CONTRÁRIO [FIM -> INICIO]:\n\n"+listaVolta);
+            System.out.println(" Tamanho da Lista: "+this.tamanho);
         }
 
     }
