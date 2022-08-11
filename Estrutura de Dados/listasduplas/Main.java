@@ -29,6 +29,9 @@ public class Main {
         //4 - Utilizando Remoção de Elementos Existentes/Inexistentes |
         Lista.Remover(32);
         Lista.Remover(30);
+        Lista.Remover(1);
+        Lista.Remover(20);
+        Lista.Remover(20);
         
         //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();
