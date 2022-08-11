@@ -11,18 +11,18 @@ Listas encadeadas nada mais são que uma seqüência de células ligadas ou enca
 
 ```python
 
-# Verificar se a lista está vazia
+# Verificar se a lista está vazia...
 ListaVazia();
 
-# Insere um novo elemento na lista
+# Insere um novo elemento na lista...
 Inserir();
 
-# Remove um elemento inserido da lista
+# Remove um elemento inserido da lista...
 Remover();
 
-# Verifica a existência do elemento solicitado na lista
+# Verifica a existência do elemento solicitado na lista...
 Buscar();
 
-# Imprime a lista
+# Imprime a lista pela ordem de inserção...
 Imprimir();
 ```
