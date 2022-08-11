@@ -35,7 +35,6 @@ public class Main {
         //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();
 
-
         //6 - Utilizando Busca |
         Lista.Buscar(200);
         Lista.Buscar(55);
