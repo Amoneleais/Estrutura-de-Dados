@@ -26,7 +26,6 @@ public class Main {
         //3 - Utilizando Impressão |
         Lista.Imprimir();
 
-        /*
         //4 - Utilizando Remoção de Elementos Existentes/Inexistentes |
         Lista.Remover(30);
         Lista.Remover(55);
@@ -35,7 +34,7 @@ public class Main {
         
         //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();
-    */
+
 
         //6 - Utilizando Busca |
         Lista.Buscar(200);

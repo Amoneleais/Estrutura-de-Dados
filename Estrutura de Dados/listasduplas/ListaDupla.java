@@ -36,12 +36,14 @@ public class ListaDupla {
             if(auxiliar.getInfo() == info){    
                 if(auxiliar == this.ref){
                     ref = auxiliar.getProx();
+                    ref.setAnterior(null);
                     this.tamanho--;
                     System.out.println(" \n"+info+" removido com sucesso!");
                     break;
                 } 
                 else {
                     anterior.setProx(auxiliar.getProx());
+                    anterior.setAnterior(auxiliar.getAnterior());
                     System.out.println(" \n"+info+" removido com sucesso!");
                     this.tamanho--;
                     break;
