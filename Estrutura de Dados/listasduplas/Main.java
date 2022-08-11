@@ -32,6 +32,7 @@ public class Main {
         Lista.Remover(1);
         Lista.Remover(20);
         Lista.Remover(20);
+        Lista.Remover(10);
 
         //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();

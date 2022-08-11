@@ -43,7 +43,9 @@ public class ListaDupla {
                 } 
                 else {
                     anterior.setProx(auxiliar.getProx());
-                    anterior.getProx().setAnterior(anterior);
+                    if(anterior.getProx() != null){
+                        anterior.getProx().setAnterior(anterior);
+                    }
                     System.out.println(" \n"+info+" removido com sucesso!");
                     this.tamanho--;
                     break;
