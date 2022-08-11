@@ -32,13 +32,14 @@ public class Main {
         Lista.Remover(1);
         Lista.Remover(20);
         Lista.Remover(20);
-        
+
         //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();
 
         //6 - Utilizando Busca |
         Lista.Buscar(200);
         Lista.Buscar(55);
+        Lista.Buscar(20);
 
         //7 - Lista Vazia depois de Inserções |
         
