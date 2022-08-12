@@ -5,6 +5,8 @@ Implementação de Lista Encadeada Simples para a matéria de Estrutura de Dados
 
 Listas encadeadas nada mais são que uma seqüência de células ligadas ou encadeadas umas as outras. As células de uma lista encadeada são compostas de dois elementos cada. O primeiro elemento é o dado efetivo a ser armazenado e o segundo compraz uma referência para o próximo elemento da lista.
 
+Fonte: Facom.ufu.br
+
 # O que foi implementado?
 
 - Nesta Lista foram implementadas as seguintes funções: 
