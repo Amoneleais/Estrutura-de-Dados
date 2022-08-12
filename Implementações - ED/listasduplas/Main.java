@@ -14,7 +14,7 @@ public class Main {
         int elemento;
 
         while (i) {
-            System.out.println("\nTESTE DE LISTA DUPLAMENTE ENCADEADA\n1 - INSERIR\n2 - REMOVER\n3 - IMPRIMIR\n4 - BUSCAR\n5 - ESVAZIAR\n");
+            System.out.println("\nTESTE DE LISTA DUPLAMENTE ENCADEADA\n\n1 - INSERIR\n2 - REMOVER\n3 - IMPRIMIR\n4 - BUSCAR\n5 - ESVAZIAR\n\n0 - FINALIZAR\n");
             int j = sc.nextInt();
             System.out.println("");
             switch(j){
@@ -35,6 +35,9 @@ public class Main {
                     break;
                 case 5:
                     lista.Esvaziar();
+                    break;
+                case 0:
+                    i = false;
                     break;
             }
         }
