@@ -5,6 +5,8 @@ Implementação de Lista Duplamente Encadeada para a matéria de Estrutura de Da
 
 Em ciência da computação, uma lista duplamente ligada (ou lista duplamente encadeada) é uma estrutura de dados ligada que consiste de um conjunto de registros sequencialmente ligados chamados de nós e é uma extensão da lista simplesmente ligada (ou lista simplesmente encadeada).
 
+Fonte: Wikipedia.
+
 # O que foi implementado?
 
 - Nesta Lista foram implementadas as seguintes funções: 
