@@ -25,20 +25,20 @@ public class ListaEncadeadaDupla {
     }
 
     //Remove Elemento na Lista Dupla
-    public void Remover(int info){
+    public void Remover(int elemento){
         No anterior = null;
         for(No auxiliar = ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-            if(auxiliar.getInfo() == info){    
+            if(auxiliar.getInfo() == elemento){    
                 if(auxiliar == this.ref & this.ref.getProx() != null){
                     ref = auxiliar.getProx();
                     ref.setAnterior(null);
                     this.tamanho--;
-                    System.out.println(" \n"+info+" removido com sucesso!");
+                    System.out.println(" \n"+elemento+" removido com sucesso!");
                     break;
                 } 
                 else if(auxiliar == this.ref){
                     this.ref = null;
-                    System.out.println(" \n"+info+" removido com sucesso!");
+                    System.out.println(" \n"+elemento+" removido com sucesso!");
                     this.tamanho--;
                     break;
                 }
@@ -47,12 +47,12 @@ public class ListaEncadeadaDupla {
                     if(anterior.getProx() != null){
                         anterior.getProx().setAnterior(anterior);
                     }
-                    System.out.println(" \n"+info+" removido com sucesso!");
+                    System.out.println(" \n"+elemento+" removido com sucesso!");
                     this.tamanho--;
                     break;
                 }
             }
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
+            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
                 System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
             }
             anterior = auxiliar;
@@ -67,15 +67,26 @@ public class ListaEncadeadaDupla {
     }
     
     //Buscar Elemento na Lista Dupla
-    public void Buscar(int info){
+    public void Buscar(int elemento){
         int posicao = 0;
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             posicao++;
-            if(auxiliar.getInfo() == info){
-                System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+            if(auxiliar.getInfo() == elemento){
+                if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
+                    System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                }
+                else if(auxiliar.getAnterior() == null & auxiliar.getProx() != null){
+                    System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                }
+                else if(auxiliar.getAnterior() == null & auxiliar.getProx() == null){
+                    System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                }
+                else{
+                    System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                }
                 break;
             }
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
+            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
                 System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
             }
         }
@@ -90,11 +101,19 @@ public class ListaEncadeadaDupla {
         }
         else{
             for(No auxiliarVai = this.ref; auxiliarVai != null; auxiliarVai = auxiliarVai.getProx()){
-                listaVai += "["+auxiliarVai.getInfo()+"] ";
-                if(auxiliarVai.getProx()==null){
+                if(auxiliarVai.getProx() == null){
+                    listaVai += "["+auxiliarVai.getInfo()+"]";
                     for(No auxiliarVolta = auxiliarVai; auxiliarVolta != null; auxiliarVolta = auxiliarVolta.getAnterior()){
-                        listaVolta += "["+auxiliarVolta.getInfo()+"] ";
+                        if(auxiliarVolta.getAnterior() !=  null){
+                            listaVolta += "["+auxiliarVolta.getInfo()+"] <- ";
+                        }
+                        else{
+                            listaVolta += "["+auxiliarVolta.getInfo()+"]";
+                        }
                     }
+                }
+                else{
+                    listaVai += "["+auxiliarVai.getInfo()+"] -> ";
                 }
             }
             System.out.println("\n"+listaVai);

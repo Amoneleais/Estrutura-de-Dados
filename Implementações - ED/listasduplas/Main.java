@@ -1,76 +1,44 @@
 package listasduplas;
 
+import java.util.Scanner;
+
 public class Main {
-    /**
+        /**
      * @param args
      */
     public static void main(String[] args) {
         
-        ListaEncadeadaDupla Lista = new ListaEncadeadaDupla();
+        Scanner sc = new Scanner(System.in);
+        ListaEncadeadaDupla lista = new ListaEncadeadaDupla();
+        boolean i = true;
+        int elemento;
 
-        //1 - Lista Vazia |
- 
-        System.out.println("\nLista Vazia: "+Lista.ListaVazia());
-
-        //2 - Utilizando Inserção |
-
-        Lista.Inserir(10);
-        Lista.Inserir(20);
-        Lista.Inserir(5);
-        Lista.Inserir(1);
-        Lista.Inserir(1);
-        Lista.Inserir(9);
-        Lista.Inserir(55);
-        Lista.Inserir(2590);
-        Lista.Inserir(70);
-        Lista.Inserir(30);
-
-        //3 - Utilizando Impressão |
-
-        Lista.Imprimir();
-
-        //4 - Utilizando Remoção de Elementos Existentes/Inexistentes |
-
-        Lista.Remover(32);
-        Lista.Remover(30);
-        Lista.Remover(1);
-        Lista.Remover(20);
-        Lista.Remover(20);
-        Lista.Remover(10);
-
-        Lista.Imprimir();
-
-        //5 - Utilizando Busca |
-
-        Lista.Buscar(200);
-        Lista.Buscar(55);
-        Lista.Buscar(20);
-
-        //6 - Lista Vazia depois de Inserções |
-
-        System.out.println("\nLista Vazia: "+Lista.ListaVazia());
-
-        //7 - Esvaziando Lista |
-
-        Lista.Esvaziar();
-
-        Lista.Imprimir();
-
-        //8 - Inserções após esvaziar |
-
-        Lista.Inserir(10);
-        Lista.Inserir(20);
-        Lista.Inserir(5);
-
-        Lista.Imprimir();
-
-        //9 - Removendo Todos os elementos um por um |
-  
-        Lista.Remover(10);
-        Lista.Remover(20);
-        Lista.Remover(5);
-
-        Lista.Imprimir();
-
+        while (i) {
+            System.out.println("\nTESTE DE LISTA DUPLAMENTE ENCADEADA\n1 - INSERIR\n2 - REMOVER\n3 - IMPRIMIR\n4 - BUSCAR\n5 - ESVAZIAR\n");
+            int j = sc.nextInt();
+            System.out.println("");
+            switch(j){
+                case 1:
+                    elemento = sc.nextInt();
+                    lista.Inserir(elemento);
+                    break;
+                case 2:
+                    elemento = sc.nextInt();
+                    lista.Remover(elemento);
+                    break;
+                case 3:
+                    lista.Imprimir();
+                    break;
+                case 4:
+                    elemento = sc.nextInt();
+                    lista.Buscar(elemento);
+                    break;
+                case 5:
+                    lista.Esvaziar();
+                    break;
+            }
+        }
+        sc.close();
     }
+
 }
