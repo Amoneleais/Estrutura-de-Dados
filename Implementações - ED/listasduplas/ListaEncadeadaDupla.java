@@ -59,6 +59,7 @@ public class ListaEncadeadaDupla {
         }
     }
 
+    //Esvazia a Lista Dupla
     public void Esvaziar(){
         this.ref = null;
         this.tamanho = 0;
