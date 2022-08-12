@@ -34,13 +34,17 @@ public class ListaDupla {
         No anterior = null;
         for(No auxiliar = ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             if(auxiliar.getInfo() == info){    
-                if(auxiliar == this.ref){
+                if(auxiliar == this.ref & this.ref.getProx() != null){
                     ref = auxiliar.getProx();
                     ref.setAnterior(null);
                     this.tamanho--;
                     System.out.println(" \n"+info+" removido com sucesso!");
                     break;
                 } 
+                else if(auxiliar == this.ref){
+                    this.ref = null;
+                    System.out.println(" \n"+info+" removido com sucesso!");
+                }
                 else {
                     anterior.setProx(auxiliar.getProx());
                     if(anterior.getProx() != null){
@@ -56,6 +60,12 @@ public class ListaDupla {
             }
             anterior = auxiliar;
         }
+    }
+
+    public void Esvaziar(){
+        ref = null;
+        tamanho = 0;
+        System.out.println("\n A Lista foi Esvaziada");
     }
     
     //Buscar Elemento na Lista Dupla

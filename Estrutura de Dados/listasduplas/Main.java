@@ -9,9 +9,11 @@ public class Main {
         ListaDupla Lista = new ListaDupla();
 
         //1 - Lista Vazia |
+ 
         System.out.println("\nLista Vazia: "+Lista.ListaVazia());
 
         //2 - Utilizando Inserção |
+
         Lista.Inserir(10);
         Lista.Inserir(20);
         Lista.Inserir(5);
@@ -24,9 +26,11 @@ public class Main {
         Lista.Inserir(30);
 
         //3 - Utilizando Impressão |
+
         Lista.Imprimir();
 
         //4 - Utilizando Remoção de Elementos Existentes/Inexistentes |
+
         Lista.Remover(32);
         Lista.Remover(30);
         Lista.Remover(1);
@@ -34,16 +38,39 @@ public class Main {
         Lista.Remover(20);
         Lista.Remover(10);
 
-        //5 - Utilizando Impressão Após Remoção |
         Lista.Imprimir();
 
-        //6 - Utilizando Busca |
+        //5 - Utilizando Busca |
+
         Lista.Buscar(200);
         Lista.Buscar(55);
         Lista.Buscar(20);
 
-        //7 - Lista Vazia depois de Inserções |
-        
-        System.out.println("\nLista Vazia: "+Lista.ListaVazia()+"\n");
+        //6 - Lista Vazia depois de Inserções |
+
+        System.out.println("\nLista Vazia: "+Lista.ListaVazia());
+
+        //7 - Esvaziando Lista |
+
+        Lista.Esvaziar();
+
+        Lista.Imprimir();
+
+        //8 - Inserções após esvaziar |
+
+        Lista.Inserir(10);
+        Lista.Inserir(20);
+        Lista.Inserir(5);
+
+        Lista.Imprimir();
+
+        //9 - Removendo Todos os elementos um por um |
+  
+        Lista.Remover(10);
+        Lista.Remover(20);
+        Lista.Remover(5);
+
+        Lista.Imprimir();
+
     }
 }
