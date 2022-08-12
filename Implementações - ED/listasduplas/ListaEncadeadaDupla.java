@@ -9,12 +9,12 @@ public class ListaEncadeadaDupla {
         
     }
 
-    //Verifica se a lista está vazia
+    //Verifica se a lista está vazia |
     public boolean ListaVazia(){    
         return this.ref == null;
     }
 
-    //Insere Elemento na Lista Dupla
+    //Insere Elemento na Lista Dupla |
     public void Inserir(int elemento){
         No novo = new No(elemento, null,this.ref);
         if(ListaVazia() == false){
@@ -24,7 +24,7 @@ public class ListaEncadeadaDupla {
         this.tamanho++;
     }
 
-    //Remove Elemento na Lista Dupla
+    //Remove Elemento na Lista Dupla |
     public void Remover(int elemento){
         No anterior = null;
         for(No auxiliar = ref; auxiliar != null; auxiliar = auxiliar.getProx()){
@@ -59,14 +59,14 @@ public class ListaEncadeadaDupla {
         }
     }
 
-    //Esvazia a Lista Dupla
+    //Esvazia a Lista Dupla |
     public void Esvaziar(){
         this.ref = null;
         this.tamanho = 0;
         System.out.println("\n A Lista foi Esvaziada");
     }
     
-    //Buscar Elemento na Lista Dupla
+    //Buscar Elemento na Lista Dupla |
     public void Buscar(int elemento){
         int posicao = 0;
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
@@ -92,7 +92,7 @@ public class ListaEncadeadaDupla {
         }
     }
 
-    //Imprime Elementos na Lista Dupla em ambos os sentidos
+    //Imprime Elementos na Lista Dupla em ambos os sentidos |
     public void Imprimir(){
         String listaVai = " ";
         String listaVolta = " ";

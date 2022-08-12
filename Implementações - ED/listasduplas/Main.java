@@ -13,6 +13,8 @@ public class Main {
         boolean i = true;
         int elemento;
 
+        //Interface simples para testes rápidos |
+
         while (i) {
             System.out.println("\nTESTE DE LISTA DUPLAMENTE ENCADEADA\n\n1 - INSERIR\n2 - REMOVER\n3 - IMPRIMIR\n4 - BUSCAR\n5 - ESVAZIAR\n\n0 - FINALIZAR\n");
             int j = sc.nextInt();
