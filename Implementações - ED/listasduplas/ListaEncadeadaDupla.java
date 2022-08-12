@@ -1,11 +1,11 @@
 package listasduplas;
 
-public class ListaDupla {
+public class ListaEncadeadaDupla {
     
     private No ref;
     private int tamanho;
 
-    public ListaDupla(){
+    public ListaEncadeadaDupla(){
         
     }
 
@@ -16,17 +16,12 @@ public class ListaDupla {
 
     //Insere Elemento na Lista Dupla
     public void Inserir(int elemento){
-        if(ListaVazia()){
-            No novo = new No(elemento, null,this.ref);
-            this.ref = novo;
-            this.tamanho++;
-        }
-        else{
-            No novo = new No(elemento, null,this.ref);
+        No novo = new No(elemento, null,this.ref);
+        if(ListaVazia() == false){
             this.ref.setAnterior(novo);
-            this.ref = novo;
-            this.tamanho++;  
         }
+        this.ref = novo;
+        this.tamanho++;
     }
 
     //Remove Elemento na Lista Dupla
@@ -44,6 +39,8 @@ public class ListaDupla {
                 else if(auxiliar == this.ref){
                     this.ref = null;
                     System.out.println(" \n"+info+" removido com sucesso!");
+                    this.tamanho--;
+                    break;
                 }
                 else {
                     anterior.setProx(auxiliar.getProx());
@@ -63,8 +60,8 @@ public class ListaDupla {
     }
 
     public void Esvaziar(){
-        ref = null;
-        tamanho = 0;
+        this.ref = null;
+        this.tamanho = 0;
         System.out.println("\n A Lista foi Esvaziada");
     }
     
@@ -85,24 +82,24 @@ public class ListaDupla {
 
     //Imprime Elementos na Lista Dupla em ambos os sentidos
     public void Imprimir(){
-        String lista = " ";
+        String listaVai = " ";
         String listaVolta = " ";
         if(ListaVazia()){
             System.out.println("\n [ LISTA VAZIA! ]");
         }
         else{
-            for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-                lista += "["+auxiliar.getInfo()+"] ";
-                if(auxiliar.getProx()==null){
-                    for(No auxiliar_reverso = auxiliar; auxiliar_reverso != null; auxiliar_reverso = auxiliar_reverso.getAnterior()){
-                        listaVolta += "["+auxiliar_reverso.getInfo()+"] ";
+            for(No auxiliarVai = this.ref; auxiliarVai != null; auxiliarVai = auxiliarVai.getProx()){
+                listaVai += "["+auxiliarVai.getInfo()+"] ";
+                if(auxiliarVai.getProx()==null){
+                    for(No auxiliarVolta = auxiliarVai; auxiliarVolta != null; auxiliarVolta = auxiliarVolta.getAnterior()){
+                        listaVolta += "["+auxiliarVolta.getInfo()+"] ";
                     }
                 }
             }
-            System.out.println("\n"+lista);
-            System.out.println("\n BUSCANDO NO SENTIDO CONTRÁRIO [FIM -> INICIO]:\n\n"+listaVolta);
+            System.out.println("\n"+listaVai);
+            System.out.println("\n IMPRESSÃO NO SENTIDO CONTRÁRIO [FIM -> INICIO]:\n\n"+listaVolta);
             System.out.println(" Tamanho da Lista: "+this.tamanho);
         }
-
     }
+
 }

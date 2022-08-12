@@ -6,7 +6,7 @@ public class Main {
      */
     public static void main(String[] args) {
         
-        ListaDupla Lista = new ListaDupla();
+        ListaEncadeadaDupla Lista = new ListaEncadeadaDupla();
 
         //1 - Lista Vazia |
  
