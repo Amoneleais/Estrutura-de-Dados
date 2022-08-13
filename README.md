@@ -8,6 +8,7 @@ Estrutura de dados é o ramo da computação que estuda os diversos mecanismos d
 Fonte: UNICAMP
 
 ## Implementações <img align="left" width="50" src="https://www.stickersdevs.com.br/wp-content/uploads/2022/01/java-adesivo-sticker.png">
+Progresso
 ```
 Lista Encadeada Simples - 100%
 ```
