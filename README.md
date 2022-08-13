@@ -1,4 +1,4 @@
-<h1 align=center> Estrutura-de-Dados </h1>
+<h1 align=center>Estrutura-de-Dados</h1>
 <p align="center">
   <img width="500" src="https://www.luisdev.com.br/wp-content/uploads/2021/04/ESTRUTURA-DE-DADOS-COM-C.png">
  </p>
@@ -7,7 +7,8 @@ Estrutura de dados é o ramo da computação que estuda os diversos mecanismos d
 
 Fonte: UNICAMP
 
-<h2 align=center> Implementações <img align="left" width="50" src="https://www.stickersdevs.com.br/wp-content/uploads/2022/01/java-adesivo-sticker.png"></h2><br><br>
+<h2 align=center>Implementações</h2><br><br>
+<img align="left" width="50" src="https://www.stickersdevs.com.br/wp-content/uploads/2022/01/java-adesivo-sticker.png">
 ```
 Lista Encadeada Simples - 100%
 ```
