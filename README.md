@@ -7,9 +7,8 @@ Estrutura de dados é o ramo da computação que estuda os diversos mecanismos d
 
 Fonte: UNICAMP
 
-## Implementações
+## Implementações <img align="left" width="30" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/0a/8cd7f1b14344618b75142593bc7af8/JavaCupLogo800x800.png?auto=format%2Ccompress&dpr=1">
 
-Todas foram implementadas em <img width="30" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/0a/8cd7f1b14344618b75142593bc7af8/JavaCupLogo800x800.png?auto=format%2Ccompress&dpr=1">
 ```
 Lista Encadeada Simples - 100%
 ```
