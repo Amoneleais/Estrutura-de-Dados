@@ -1,4 +1,4 @@
-# Estrutura-de-Dados
+<h1 align=center> Estrutura-de-Dados </h1>
 <p align="center">
   <img width="500" src="https://www.luisdev.com.br/wp-content/uploads/2021/04/ESTRUTURA-DE-DADOS-COM-C.png">
  </p>
