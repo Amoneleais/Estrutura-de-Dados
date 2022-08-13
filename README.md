@@ -1,6 +1,8 @@
 # Estrutura-de-Dados
 
-Pacote com implementações relacionadas à disciplina de Estrutura de Dados - INSTITUTO FEDERAL DE PERNAMBUCO
+Estrutura de dados é o ramo da computação que estuda os diversos mecanismos de organização de dados para atender aos diferentes requisitos de processamento. As estruturas de dados definem a organização, métodos de acesso e opções de processamento para a informação manipulada pelo programa.
+
+Fonte: UNICAMP
 
 ## Implementações
 
