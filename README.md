@@ -15,3 +15,18 @@ Lista Duplamente Encadeada - 100%
 ```
 Pilhas - 0%
 ```
+```
+Fila - 0%
+```
+```
+Árvores - 0%
+```
+```
+Árvores BST - 0%
+```
+```
+Tabelas Hash - 0%
+```
+```
+Grafos - 0%
+```
