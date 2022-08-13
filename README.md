@@ -11,6 +11,7 @@ Fonte: UNICAMP
 <p align="center">
   <img align="center" width="50" src="https://www.stickersdevs.com.br/wp-content/uploads/2022/01/java-adesivo-sticker.png">
 </p>
+
 ```
 Lista Encadeada Simples - 100%
 ```
