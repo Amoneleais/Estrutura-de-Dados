@@ -24,6 +24,7 @@ public class Testes {
         Lista.Inserir(2590);
         Lista.Inserir(70);
         Lista.Inserir(30);
+        Lista.Inserir(80);
 
         //3 - Utilizando Impressão |
 
