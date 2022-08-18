@@ -48,11 +48,18 @@ public class Pilha {
         }
     }
 
+    //Esvazia a pilha |
+    public void Esvaziar(){
+        this.topo = null;
+        this.tamanho_atual = 0;
+        System.out.println("\n - A Pilha foi Esvaziada");
+    }
+
     //Imprime os elementos na pilha |
     public void Imprimir(){
         String pilha = "";
         if(PilhaVazia()){
-            System.out.println("\n [ LISTA VAZIA! ]");
+            System.out.println("\n [ PILHA VAZIA! ]");
         }
         else{
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){

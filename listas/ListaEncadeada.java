@@ -48,6 +48,13 @@ public class ListaEncadeada {
         }
     }
 
+    //Esvazia a Lista |
+    public void Esvaziar(){
+        this.ref = null;
+        this.tamanho = 0;
+        System.out.println("\n - A Lista foi Esvaziada");
+    }
+
     //Buscar Elemento na Lista Encadeada
     public void Buscar(int info){
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
@@ -75,5 +82,6 @@ public class ListaEncadeada {
             System.out.println(" Tamanho da Lista: "+tamanho);
         }
     }
+    
     
 }
