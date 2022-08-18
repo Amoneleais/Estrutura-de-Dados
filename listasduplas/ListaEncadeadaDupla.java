@@ -1,5 +1,7 @@
 package listasduplas;
-
+/**
+ * ListaEncadeadaDupla
+ */
 public class ListaEncadeadaDupla {
     
     private No ref;

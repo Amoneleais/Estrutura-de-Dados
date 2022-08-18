@@ -1,7 +1,9 @@
 package listasduplas;
 
 import java.util.Scanner;
-
+/**
+ * Main
+ */
 public class Main {
         /**
      * @param args

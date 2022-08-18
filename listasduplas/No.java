@@ -1,5 +1,7 @@
 package listasduplas;
-
+/**
+ * No
+ */
 public class No {
     
     private int info;

@@ -1,5 +1,7 @@
 package listasduplas;
-
+/**
+ * Testes
+ */
 public class Testes {
     /**
      * @param args
