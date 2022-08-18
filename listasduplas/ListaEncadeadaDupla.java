@@ -33,12 +33,12 @@ public class ListaEncadeadaDupla {
                     ref = auxiliar.getProx();
                     ref.setAnterior(null);
                     this.tamanho--;
-                    System.out.println(" \n"+elemento+" removido com sucesso!");
+                    System.out.println("\n - "+elemento+" removido com sucesso!");
                     break;
                 } 
                 else if(auxiliar == this.ref){
                     this.ref = null;
-                    System.out.println(" \n"+elemento+" removido com sucesso!");
+                    System.out.println("\n - "+elemento+" removido com sucesso!");
                     this.tamanho--;
                     break;
                 }
@@ -47,7 +47,7 @@ public class ListaEncadeadaDupla {
                     if(anterior.getProx() != null){
                         anterior.getProx().setAnterior(anterior);
                     }
-                    System.out.println(" \n"+elemento+" removido com sucesso!");
+                    System.out.println("\n - "+elemento+" removido com sucesso!");
                     this.tamanho--;
                     break;
                 }
@@ -63,7 +63,7 @@ public class ListaEncadeadaDupla {
     public void Esvaziar(){
         this.ref = null;
         this.tamanho = 0;
-        System.out.println("\n A Lista foi Esvaziada");
+        System.out.println("\n - A Lista foi Esvaziada");
     }
     
     //Buscar Elemento na Lista Dupla |
@@ -118,7 +118,7 @@ public class ListaEncadeadaDupla {
             }
             System.out.println("\n"+listaVai);
             System.out.println("\n IMPRESSÃO NO SENTIDO CONTRÁRIO [FIM -> INICIO]:\n\n"+listaVolta);
-            System.out.println(" Tamanho da Lista: "+this.tamanho);
+            System.out.println(" - Tamanho da Lista: "+this.tamanho);
         }
     }
 

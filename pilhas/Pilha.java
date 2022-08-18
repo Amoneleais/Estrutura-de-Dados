@@ -51,10 +51,10 @@ public class Pilha {
         }
         else{
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
-                pilha += "["+auxiliar.getInfo()+"]\n";
+                pilha += "| ["+auxiliar.getInfo()+"]\n";
             }
             System.out.println("\n"+pilha);
-            System.out.println(" Tamanho da Lista: "+tamanho);
+            System.out.println(" - Tamanho da Lista: "+tamanho);
         }
     }
 }
