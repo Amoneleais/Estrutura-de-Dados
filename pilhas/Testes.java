@@ -5,7 +5,7 @@ package pilhas;
 public class Testes {
     public static void main(String[] args) {
         
-        Pilha pilha = new Pilha();
+        Pilha pilha = new Pilha(5);
 
         pilha.Push(2);
         pilha.Push(4);
@@ -17,6 +17,8 @@ public class Testes {
         pilha.Push(16);
         pilha.Push(20);
         pilha.Push(17);
+
+        pilha.Pop();
 
         pilha.Imprimir();
     }    

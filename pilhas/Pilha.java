@@ -4,14 +4,18 @@ public class Pilha {
     
     private No topo;
     private int tamanho;
+    private int max;
 
+    public Pilha(int max){
+        this.max = max;
+    }
 
     public boolean PilhaVazia(){    
         return topo == null;
     }
 
     public void Push(int elemento){
-        if(tamanho == 8){
+        if(tamanho == max){
             No novo = new No(elemento, this.topo);
             topo = novo;
             No anterior = null;
@@ -27,6 +31,16 @@ public class Pilha {
             No novo = new No(elemento, this.topo);
             this.topo = novo;
             tamanho++;
+        }
+    }
+
+    public void Pop(){
+        if(PilhaVazia()){
+            System.out.println("[ PILHA VAZIA! ]");
+        }
+        else{
+            this.topo = this.topo.getProx();
+            tamanho--;
         }
     }
 
