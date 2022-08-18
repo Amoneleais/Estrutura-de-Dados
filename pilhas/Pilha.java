@@ -8,14 +8,17 @@ public class Pilha {
     private int tamanho;
     private int max;
 
+    //Construtor para definir tamanho da pilha |
     public Pilha(int max){
         this.max = max;
     }
 
+    //Verifica se a pilha está vazia |
     public boolean PilhaVazia(){    
         return topo == null;
     }
 
+    //Insere elemento no topo da pilha |
     public void Push(int elemento){
         if(tamanho == max){
             No novo = new No(elemento, this.topo);
@@ -36,6 +39,7 @@ public class Pilha {
         }
     }
 
+    //Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
     public void Pop(){
         if(PilhaVazia()){
             System.out.println("[ PILHA VAZIA! ]");
@@ -46,6 +50,7 @@ public class Pilha {
         }
     }
 
+    //Imprime os elementos na pilha |
     public void Imprimir(){
         String pilha = "";
         if(PilhaVazia()){
