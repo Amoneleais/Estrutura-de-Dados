@@ -19,9 +19,11 @@ public class ListaEncadeadaDupla {
     //Insere Elemento na Lista Dupla |
     public void Inserir(int elemento){
         No novo = new No(elemento, null,this.ref);
+        //caso a lista não esteja vazia, o nó anterior da referência se tornará o nó novo.
         if(ListaVazia() == false){
             this.ref.setAnterior(novo);
         }
+        //referência se tornará o novo nó
         this.ref = novo;
         this.tamanho++;
     }
@@ -29,21 +31,26 @@ public class ListaEncadeadaDupla {
     //Remove Elemento na Lista Dupla |
     public void Remover(int elemento){
         No anterior = null;
+        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+            //condicional, caso a info do nó atual ser igual ao elemento a ser removido.
             if(auxiliar.getInfo() == elemento){    
+                //caso o elemento seja a referência e haja sucessor.
                 if(auxiliar == this.ref & this.ref.getProx() != null){
                     ref = auxiliar.getProx();
                     ref.setAnterior(null);
                     this.tamanho--;
                     System.out.println("\n - "+elemento+" removido com sucesso!");
                     break;
-                } 
+                }
+                //caso o elemento seja a referência e não haja nenhum elemento sucessor.
                 else if(auxiliar == this.ref){
                     this.ref = null;
                     System.out.println("\n - "+elemento+" removido com sucesso!");
                     this.tamanho--;
                     break;
                 }
+                //caso não seja a referência.
                 else {
                     anterior.setProx(auxiliar.getProx());
                     if(anterior.getProx() != null){
@@ -54,7 +61,8 @@ public class ListaEncadeadaDupla {
                     break;
                 }
             }
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento | ListaVazia()){
+            //em caso de lista vazia ou elemento inexistente.
+            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento || ListaVazia()){
                 System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
             }
             anterior = auxiliar;
@@ -63,6 +71,7 @@ public class ListaEncadeadaDupla {
 
     //Esvazia a Lista Dupla |
     public void Esvaziar(){
+        //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
         this.tamanho = 0;
         System.out.println("\n - A Lista foi Esvaziada");
@@ -71,8 +80,10 @@ public class ListaEncadeadaDupla {
     //Buscar Elemento na Lista Dupla |
     public void Buscar(int elemento){
         int posicao = 0;
+        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             posicao++;
+            //caso a informação do No seja igual ao elemento, retorna para o usuário o elemento, posição, anterior e sucessor.
             if(auxiliar.getInfo() == elemento){
                 if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
                     System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
@@ -88,6 +99,7 @@ public class ListaEncadeadaDupla {
                 }
                 break;
             }
+            //caso o elemento não esteja inserido na lista, retorna mensagem para o usuário.
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
                 System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
             }
@@ -99,12 +111,16 @@ public class ListaEncadeadaDupla {
         String listaVai = " ";
         String listaVolta = " ";
         if(ListaVazia()){
+            //retorna mensagem para o usuário, em caso de lista vazia.
             System.out.println("\n [ LISTA VAZIA! ]");
         }
         else{
+            //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliarVai = this.ref; auxiliarVai != null; auxiliarVai = auxiliarVai.getProx()){
+                //caso a próxima variável seja nula irá executar o outro laço
                 if(auxiliarVai.getProx() == null){
                     listaVai += "["+auxiliarVai.getInfo()+"]";
+                    //percorre os nós no sentido contrário, do fim ao início, por meio da busca pelo anterior.
                     for(No auxiliarVolta = auxiliarVai; auxiliarVolta != null; auxiliarVolta = auxiliarVolta.getAnterior()){
                         if(auxiliarVolta.getAnterior() !=  null){
                             listaVolta += "["+auxiliarVolta.getInfo()+"] <- ";
@@ -118,6 +134,7 @@ public class ListaEncadeadaDupla {
                     listaVai += "["+auxiliarVai.getInfo()+"] -> ";
                 }
             }
+            //impressão das variáveis com todos os elementos inseridos, em ambos os sentidos.
             System.out.println("\n"+listaVai);
             System.out.println("\n IMPRESSÃO NO SENTIDO CONTRÁRIO [FIM -> INICIO]:\n\n"+listaVolta);
             System.out.println(" - Tamanho da Lista: "+this.tamanho);
