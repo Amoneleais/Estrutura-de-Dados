@@ -13,7 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean i = true;
         int tamanho_max;
-        System.out.println("Defina o tamanho da pilha: [int]");
+        System.out.println("\nDefina o tamanho da pilha: [int]");
         tamanho_max = sc.nextInt();
         int elemento;
         Pilha pilha = new Pilha(tamanho_max);

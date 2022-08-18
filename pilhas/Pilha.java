@@ -66,7 +66,7 @@ public class Pilha {
                 pilha += "| ["+auxiliar.getInfo()+"]\n";
             }
             System.out.println("\n"+pilha);
-            System.out.println(" - Tamanho da Lista: "+tamanho_atual);
+            System.out.println(" - Tamanho da Pilha: "+tamanho_atual);
         }
     }
     
