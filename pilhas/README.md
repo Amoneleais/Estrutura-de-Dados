@@ -23,6 +23,9 @@ Push();
 # Remove o último elemento inserido da pilha...
 Pop();
 
+# Esvazia totalmente a pilha...
+Esvaziar();
+
 # Imprime a pilha verticalmente...
 Imprimir();
 ```
