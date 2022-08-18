@@ -54,7 +54,7 @@ public class ListaEncadeadaDupla {
                     break;
                 }
             }
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
+            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento | ListaVazia()){
                 System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
             }
             anterior = auxiliar;
