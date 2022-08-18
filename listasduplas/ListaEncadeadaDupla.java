@@ -29,7 +29,7 @@ public class ListaEncadeadaDupla {
     //Remove Elemento na Lista Dupla |
     public void Remover(int elemento){
         No anterior = null;
-        for(No auxiliar = ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+        for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             if(auxiliar.getInfo() == elemento){    
                 if(auxiliar == this.ref & this.ref.getProx() != null){
                     ref = auxiliar.getProx();

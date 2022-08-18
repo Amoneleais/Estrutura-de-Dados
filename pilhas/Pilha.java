@@ -15,14 +15,14 @@ public class Pilha {
 
     //Verifica se a pilha está vazia |
     public boolean PilhaVazia(){    
-        return topo == null;
+        return this.topo == null;
     }
 
     //Insere elemento no topo da pilha |
     public void Push(int elemento){
         No novo = new No(elemento, this.topo);
         this.topo = novo;
-        if(tamanho_atual == tamanho_max){
+        if(this.tamanho_atual == this.tamanho_max){
             No anterior = null;
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
                 if(auxiliar.getProx()==null){
@@ -33,7 +33,7 @@ public class Pilha {
             }
         }
         else{
-            tamanho_atual++;
+            this.tamanho_atual++;
         }
     }
 
@@ -44,7 +44,7 @@ public class Pilha {
         }
         else{
             this.topo = this.topo.getProx();
-            tamanho_atual--;
+            this.tamanho_atual--;
         }
     }
 
@@ -66,7 +66,7 @@ public class Pilha {
                 pilha += "| ["+auxiliar.getInfo()+"]\n";
             }
             System.out.println("\n"+pilha);
-            System.out.println(" - Tamanho da Pilha: "+tamanho_atual);
+            System.out.println(" - Tamanho da Pilha: "+this.tamanho_atual);
         }
     }
     

@@ -13,12 +13,12 @@ public class ListaEncadeada {
 
     //Verifica se a lista está vazia
     public boolean ListaVazia(){    
-        return ref == null;
+        return this.ref == null;
     }
 
     //Insere Elemento na Lista Encadeada
     public void Inserir(int info){
-        No novo = new No(info, ref);
+        No novo = new No(info, this.ref);
         this.ref = novo;
         this.tamanho++;
     }
@@ -26,10 +26,10 @@ public class ListaEncadeada {
     //Remove Elemento na Lista Encadeada
     public void Remover(int info){
         No anterior = null;
-        for(No auxiliar = ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+        for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             if(auxiliar.getInfo() == info){    
                 if(auxiliar == this.ref){
-                    ref = auxiliar.getProx();
+                    this.ref = auxiliar.getProx();
                     this.tamanho--;
                     System.out.println(" \n"+info+" removido com sucesso!");
                     break;
@@ -79,7 +79,7 @@ public class ListaEncadeada {
                 lista += "["+auxiliar.getInfo()+"] ";
             }
             System.out.println("\n"+lista);
-            System.out.println(" Tamanho da Lista: "+tamanho);
+            System.out.println(" Tamanho da Lista: "+this.tamanho);
         }
     }
     
