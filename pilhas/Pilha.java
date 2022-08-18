@@ -5,12 +5,12 @@ package pilhas;
 public class Pilha {
     
     private No topo;
-    private int tamanho;
-    private int max;
+    private int tamanho_atual;
+    private int tamanho_max;
 
     //Construtor para definir tamanho da pilha |
-    public Pilha(int max){
-        this.max = max;
+    public Pilha(int tamanho_max){
+        this.tamanho_max = tamanho_max;
     }
 
     //Verifica se a pilha está vazia |
@@ -22,7 +22,7 @@ public class Pilha {
     public void Push(int elemento){
         No novo = new No(elemento, this.topo);
         this.topo = novo;
-        if(tamanho == max){
+        if(tamanho_atual == tamanho_max){
             No anterior = null;
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
                 if(auxiliar.getProx()==null){
@@ -33,7 +33,7 @@ public class Pilha {
             }
         }
         else{
-            tamanho++;
+            tamanho_atual++;
         }
     }
 
@@ -44,7 +44,7 @@ public class Pilha {
         }
         else{
             this.topo = this.topo.getProx();
-            tamanho--;
+            tamanho_atual--;
         }
     }
 
@@ -59,7 +59,7 @@ public class Pilha {
                 pilha += "| ["+auxiliar.getInfo()+"]\n";
             }
             System.out.println("\n"+pilha);
-            System.out.println(" - Tamanho da Lista: "+tamanho);
+            System.out.println(" - Tamanho da Lista: "+tamanho_atual);
         }
     }
 }
