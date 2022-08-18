@@ -23,7 +23,7 @@ public class ListaEncadeadaDupla {
         if(ListaVazia() == false){
             this.ref.setAnterior(novo);
         }
-        //referência se tornará o novo nó
+        //referência se tornará o novo nó.
         this.ref = novo;
         this.tamanho++;
     }
