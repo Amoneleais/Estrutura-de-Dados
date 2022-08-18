@@ -19,7 +19,7 @@ Lista Encadeada Simples - 100%
 Lista Duplamente Encadeada - 100%
 ```
 ```
-Pilhas - 0%
+Pilhas - 80%
 ```
 ```
 Fila - 0%
