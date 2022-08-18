@@ -20,9 +20,9 @@ public class Pilha {
 
     //Insere elemento no topo da pilha |
     public void Push(int elemento){
+        No novo = new No(elemento, this.topo);
+        this.topo = novo;
         if(tamanho == max){
-            No novo = new No(elemento, this.topo);
-            topo = novo;
             No anterior = null;
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
                 if(auxiliar.getProx()==null){
@@ -33,8 +33,6 @@ public class Pilha {
             }
         }
         else{
-            No novo = new No(elemento, this.topo);
-            this.topo = novo;
             tamanho++;
         }
     }
