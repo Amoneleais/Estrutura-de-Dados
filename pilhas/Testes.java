@@ -39,5 +39,6 @@ public class Testes {
         pilha.Pop();
 
         pilha.Imprimir();
+        
     }    
 }
