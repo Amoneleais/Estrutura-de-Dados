@@ -31,41 +31,47 @@ public class ListaEncadeadaDupla {
     //Remove Elemento na Lista Dupla |
     public void Remover(int elemento){
         No anterior = null;
-        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
-        for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-            //condicional, caso a info do nó atual ser igual ao elemento a ser removido.
-            if(auxiliar.getInfo() == elemento){    
-                //caso o elemento seja a referência e haja sucessor.
-                if(auxiliar == this.ref & this.ref.getProx() != null){
-                    ref = auxiliar.getProx();
-                    ref.setAnterior(null);
-                    this.tamanho--;
-                    System.out.println("\n - "+elemento+" removido com sucesso!");
+        if(ListaVazia()){
+            System.out.println("\n [ REMOVER: LISTA VAZIA! ]");
+        }
+        else{
+            //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
+            for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+                //em caso de lista vazia ou elemento inexistente.
+                if(auxiliar.getProx() == null && auxiliar.getInfo() != elemento){
+                    System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
                     break;
                 }
-                //caso o elemento seja a referência e não haja nenhum elemento sucessor.
-                else if(auxiliar == this.ref){
-                    this.ref = null;
-                    System.out.println("\n - "+elemento+" removido com sucesso!");
-                    this.tamanho--;
-                    break;
-                }
-                //caso não seja a referência.
-                else {
-                    anterior.setProx(auxiliar.getProx());
-                    if(anterior.getProx() != null){
-                        anterior.getProx().setAnterior(anterior);
+                //condicional, caso a info do nó atual ser igual ao elemento a ser removido.
+                else if(auxiliar.getInfo() == elemento){    
+                    //caso o elemento seja a referência e haja sucessor.
+                    if(auxiliar == this.ref & this.ref.getProx() != null){
+                        ref = auxiliar.getProx();
+                        ref.setAnterior(null);
+                        this.tamanho--;
+                        System.out.println("\n - "+elemento+" REMOVIDO COM SUCESSO!");
+                        break;
                     }
-                    System.out.println("\n - "+elemento+" removido com sucesso!");
-                    this.tamanho--;
-                    break;
+                    //caso o elemento seja a referência e não haja nenhum elemento sucessor.
+                    else if(auxiliar == this.ref){
+                        this.ref = null;
+                        System.out.println("\n - "+elemento+" REMOVIDO COM SUCESSO!");
+                        this.tamanho--;
+                        break;
+                    }
+                    //caso não seja a referência.
+                    else {
+                        anterior.setProx(auxiliar.getProx());
+                        if(anterior.getProx() != null){
+                            anterior.getProx().setAnterior(anterior);
+                        }
+                        System.out.println("\n - "+elemento+" REMOVIDO COM SUCESSO!");
+                        this.tamanho--;
+                        break;
+                    }
                 }
+                anterior = auxiliar;
             }
-            //em caso de lista vazia ou elemento inexistente.
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento || ListaVazia()){
-                System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
-            }
-            anterior = auxiliar;
         }
     }
 
@@ -74,34 +80,39 @@ public class ListaEncadeadaDupla {
         //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
         this.tamanho = 0;
-        System.out.println("\n - A Lista foi Esvaziada");
+        System.out.println("\n - A LISTA FOI ESVAZIADA");
     }
     
     //Buscar Elemento na Lista Dupla |
     public void Buscar(int elemento){
         int posicao = 0;
+        if(ListaVazia()){
+            System.out.println("\n [ BUSCAR: LISTA VAZIA! ]");
+        }
         //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
-        for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-            posicao++;
-            //caso a informação do No seja igual ao elemento, retorna para o usuário o elemento, posição, anterior e sucessor.
-            if(auxiliar.getInfo() == elemento){
-                if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
-                    System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+        else{
+            for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+                posicao++;
+                //caso a informação do No seja igual ao elemento, retorna para o usuário o elemento, posição, anterior e sucessor.
+                if(auxiliar.getInfo() == elemento){
+                    if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else if(auxiliar.getAnterior() == null & auxiliar.getProx() != null){
+                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else if(auxiliar.getAnterior() == null & auxiliar.getProx() == null){
+                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else{
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    break;
                 }
-                else if(auxiliar.getAnterior() == null & auxiliar.getProx() != null){
-                    System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                //caso o elemento não esteja inserido na lista, retorna mensagem para o usuário.
+                else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
+                    System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
                 }
-                else if(auxiliar.getAnterior() == null & auxiliar.getProx() == null){
-                    System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
-                }
-                else{
-                    System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
-                }
-                break;
-            }
-            //caso o elemento não esteja inserido na lista, retorna mensagem para o usuário.
-            else if(auxiliar.getProx() == null & auxiliar.getInfo() != elemento){
-                System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
             }
         }
     }
@@ -112,7 +123,7 @@ public class ListaEncadeadaDupla {
         String listaVolta = " ";
         //retorna mensagem para o usuário, em caso de lista vazia.
         if(ListaVazia()){
-            System.out.println("\n [ LISTA VAZIA! ]");
+            System.out.println("\n [ IMPRIMIR: LISTA VAZIA! ]");
         }
         else{
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
