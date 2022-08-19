@@ -8,6 +8,10 @@ public class Pilha {
     private int tamanho_atual;
     private int tamanho_max;
 
+    public Pilha(){
+    
+    }
+
     //Construtor para definir tamanho da pilha |
     public Pilha(int tamanho_max){
         this.tamanho_max = tamanho_max;
@@ -22,8 +26,8 @@ public class Pilha {
     public void Push(int elemento){
         No novo = new No(elemento, this.topo);
         this.topo = novo;
-        //caso a pilha esteja cheia (quantidade de elementos = tamanho máximo).
-        if(this.tamanho_atual == this.tamanho_max){
+        //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
+        if(this.tamanho_max > 0 && this.tamanho_atual == this.tamanho_max){
             No anterior = null;
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){

@@ -9,7 +9,7 @@ public class Testes {
     public static void main(String[] args) {
         
         //Instanciando a pilha em um tamanho definido |
-        Pilha pilha = new Pilha(10);
+        Pilha pilha = new Pilha();
 
         //Utilizando o método push para inserir elementos na pilha |
         pilha.Push(2);
