@@ -17,7 +17,7 @@ public class ListaEncadeadaDupla {
     }
 
     //Insere Elemento na Lista Dupla |
-    public void Inserir(int elemento){
+    public void Inserir(long elemento){
         No novo = new No(elemento, null,this.ref);
         //caso a lista não esteja vazia, o nó anterior da referência se tornará o nó novo.
         if(ListaVazia() == false){
@@ -29,7 +29,7 @@ public class ListaEncadeadaDupla {
     }
 
     //Remove Elemento na Lista Dupla |
-    public void Remover(int elemento){
+    public void Remover(long elemento){
         No anterior = null;
         if(ListaVazia()){
             System.out.println("\n [ REMOVER: LISTA VAZIA! ]");
@@ -84,7 +84,7 @@ public class ListaEncadeadaDupla {
     }
     
     //Buscar Elemento na Lista Dupla |
-    public void Buscar(int elemento){
+    public void Buscar(long elemento){
         int posicao = 0;
         if(ListaVazia()){
             System.out.println("\n [ BUSCAR: LISTA VAZIA! ]");

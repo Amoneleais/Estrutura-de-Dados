@@ -4,27 +4,27 @@ package listasduplas;
  */
 public class No {
     
-    private int info;
+    private long info;
     private No anterior;
     private No prox;
 
-    public No(int info){
+    public No(long info){
         this.info = info;
         this.anterior = null;
         this.prox = null;
     }
     
-    public No(int info, No anterior, No prox) {
+    public No(long info, No anterior, No prox) {
         this.info = info;
         this.anterior = anterior;
         this.prox = prox;
     }
 
-    public int getInfo() {
+    public long getInfo() {
         return info;
     }
 
-    public void setInfo(int info) {
+    public void setInfo(long info) {
         this.info = info;
     }
     

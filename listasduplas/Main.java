@@ -13,7 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ListaEncadeadaDupla lista = new ListaEncadeadaDupla();
         boolean i = true;
-        int elemento;
+        long elemento;
 
         //Interface simples para testes rápidos |
 
@@ -23,18 +23,18 @@ public class Main {
             System.out.println("");
             switch(j){
                 case 1:
-                    elemento = sc.nextInt();
+                    elemento = sc.nextLong();
                     lista.Inserir(elemento);
                     break;
                 case 2:
-                    elemento = sc.nextInt();
+                    elemento = sc.nextLong();
                     lista.Remover(elemento);
                     break;
                 case 3:
                     lista.Imprimir();
                     break;
                 case 4:
-                    elemento = sc.nextInt();
+                    elemento = sc.nextLong();
                     lista.Buscar(elemento);
                     break;
                 case 5:
