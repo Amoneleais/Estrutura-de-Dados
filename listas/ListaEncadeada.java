@@ -81,8 +81,8 @@ public class ListaEncadeada {
     //Imprime os Elementos da Lista Encadeada
     public void Imprimir(){
         String lista = " ";
+        //retorna mensagem para o usuário, em caso de lista vazia.
         if(ListaVazia()){
-            //retorna mensagem para o usuário, em caso de lista vazia.
             System.out.println("\n [ LISTA VAZIA! ]");
         }
         else{

@@ -110,8 +110,8 @@ public class ListaEncadeadaDupla {
     public void Imprimir(){
         String listaVai = " ";
         String listaVolta = " ";
+        //retorna mensagem para o usuário, em caso de lista vazia.
         if(ListaVazia()){
-            //retorna mensagem para o usuário, em caso de lista vazia.
             System.out.println("\n [ LISTA VAZIA! ]");
         }
         else{
