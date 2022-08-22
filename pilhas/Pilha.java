@@ -27,6 +27,7 @@ public class Pilha {
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max){
             this.Pop();
+            this.tamanho_atual++;
         }
         else{
             this.tamanho_atual++;
