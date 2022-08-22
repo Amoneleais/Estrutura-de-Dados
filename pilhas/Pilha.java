@@ -24,24 +24,15 @@ public class Pilha {
 
     //Insere elemento no topo da pilha |
     public void Push(int elemento){
-        No novo = new No(elemento, this.topo);
-        this.topo = novo;
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
-        if(this.tamanho_max > 0 && this.tamanho_atual == this.tamanho_max){
-            No anterior = null;
-            //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
-            for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
-                //caso o próximo elemento seja nulo, o auxiliar na posição atual se tornará nulo para inserção do elemento.
-                if(auxiliar.getProx()==null){
-                    anterior.setProx(auxiliar.getProx());
-                    break;
-                }
-                anterior = auxiliar;
-            }
+        if(this.tamanho_atual == this.tamanho_max){
+            this.Pop();
         }
         else{
             this.tamanho_atual++;
         }
+        No novo = new No(elemento, this.topo);
+        this.topo = novo;
     }
 
     //Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
