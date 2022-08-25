@@ -26,14 +26,13 @@ public class Pilha {
     public void Push(int elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
-            this.Pop();
-            this.tamanho_atual++;
+            System.out.println("\n[ PILHA CHEIA! ]");
         }
         else{
             this.tamanho_atual++;
+            No novo = new No(elemento, this.topo);
+            this.topo = novo;
         }
-        No novo = new No(elemento, this.topo);
-        this.topo = novo;
     }
 
     //Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)

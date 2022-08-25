@@ -8,6 +8,8 @@ public class Testes {
      */
     public static void main(String[] args) {
         
+        /*  
+        
         Pilha pilha01 = new Pilha();
         
         //Utilizando o método push para inserir elementos na pilha |
@@ -20,7 +22,7 @@ public class Testes {
 
         //Imprimindo a pilha |
         pilha01.Imprimir();
-        
+
         //Utilizando o método pop para remoção do elemento no topo da pilha |
         pilha01.Pop();
         pilha01.Pop();
@@ -28,19 +30,8 @@ public class Testes {
         pilha01.Pop();
 
         pilha01.Imprimir();
-
-        pilha01.Pop();
-        pilha01.Pop();
-        pilha01.Pop();
-
-        pilha01.Imprimir();
-
-        pilha01.Push(60);
-        pilha01.Push(800);
-
-        pilha01.Imprimir();
         
-        /*
+        */
         //Instanciando a pilha em um tamanho definido |
         Pilha pilha02 = new Pilha(5);
 
@@ -49,7 +40,7 @@ public class Testes {
         pilha02.Push(47);
         pilha02.Push(16);
         pilha02.Push(52);
-        
+
         pilha02.Imprimir();
 
         //Testando inserir em pilha "cheia" |
@@ -64,6 +55,5 @@ public class Testes {
 
         pilha02.Imprimir();
         
-        */
     }    
 }
