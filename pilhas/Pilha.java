@@ -6,7 +6,7 @@ public class Pilha {
     
     private No topo;
     private int tamanho_atual;
-    private int tamanho_max;
+    public int tamanho_max;
 
     public Pilha(){
     
