@@ -7,9 +7,7 @@ public class Testes {
      * @param args
      */
     public static void main(String[] args) {
-        
-        /*  
-        
+            
         Pilha pilha01 = new Pilha();
         
         //Utilizando o método push para inserir elementos na pilha |
@@ -31,7 +29,6 @@ public class Testes {
 
         pilha01.Imprimir();
         
-        */
         //Instanciando a pilha em um tamanho definido |
         Pilha pilha02 = new Pilha(5);
 
