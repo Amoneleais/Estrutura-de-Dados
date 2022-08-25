@@ -16,6 +16,7 @@ public class Main {
         System.out.println("\nDeseja definir um tamanho para a pilha? [y - void]");
         String confirmacao = sc.nextLine();
         Pilha pilha = new Pilha();
+        //Definindo tamanho de pilha |
         if(confirmacao.equals("y")) {
             int tamanho_max;
             System.out.println("\nDefina o tamanho da pilha: [int]");
