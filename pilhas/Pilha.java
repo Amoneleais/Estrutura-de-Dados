@@ -11,7 +11,7 @@ public class Pilha {
     public Pilha(){
     
     }
-
+    
     //Construtor para definir tamanho da pilha |
     public Pilha(int tamanho_max){
         this.tamanho_max = tamanho_max;
@@ -25,7 +25,7 @@ public class Pilha {
     //Insere elemento no topo da pilha |
     public void Push(int elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
-        if(this.tamanho_atual == this.tamanho_max){
+        if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
             this.Pop();
             this.tamanho_atual++;
         }
@@ -40,7 +40,7 @@ public class Pilha {
     public void Pop(){
         //em caso de pilha vazia, retorna mensagem para o usuário.
         if(PilhaVazia()){
-            System.out.println("[ PILHA VAZIA! ]");
+            System.out.println(" [ PILHA VAZIA! ]");
         }
         //remove o elemento no topo da pilha, último inserido.
         else{
