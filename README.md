@@ -19,20 +19,20 @@ Lista Encadeada Simples - 100%
 Lista Duplamente Encadeada - 100%
 ```
 ```
-Pilhas - 100%
+Pilha - 100%
 ```
 ```
 Fila - 0%
 ```
 ```
-Árvores - 0%
+Árvore - 0%
 ```
 ```
-Árvores BST - 0%
+Árvore BST - 0%
 ```
 ```
-Tabelas Hash - 0%
+Tabela Hash - 0%
 ```
 ```
-Grafos - 0%
+Grafo - 0%
 ```
