@@ -96,13 +96,13 @@ public class ListaEncadeadaDupla {
                 //caso a informação do No seja igual ao elemento, retorna para o usuário o elemento, posição, anterior e sucessor.
                 if(auxiliar.getInfo() == elemento){
                     if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
-                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx()+"]"+"\n POSICAO:   "+posicao);
                     }
                     else if(auxiliar.getAnterior() == null & auxiliar.getProx() != null){
-                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
                     }
                     else if(auxiliar.getAnterior() == null & auxiliar.getProx() == null){
-                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx()+"]"+"\n POSICAO:   "+posicao);
                     }
                     else{
                         System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
