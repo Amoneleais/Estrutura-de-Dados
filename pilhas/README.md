@@ -1,4 +1,4 @@
-# Pilhas
+# <b>Pilhas</b>
 
 Implementação de Pilha para a matéria de Estrutura de Dados
 ## O quê são?
@@ -9,7 +9,7 @@ São estruturas de dados do tipo LIFO (last-in first-out), onde o último elemen
 Fonte: UFRJ
 </a>
 
-# O que foi implementado?
+## O que foi implementado?
 
 - Nesta Pilha foram implementadas as seguintes funções: 
 
