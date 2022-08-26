@@ -66,7 +66,12 @@ public class Pilha {
         else{
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
-                pilha += "| ["+auxiliar.getInfo()+"]\n";
+                if(auxiliar == this.topo){
+                    pilha += "| ["+auxiliar.getInfo()+"] <- TOPO\n";
+                }
+                else{
+                    pilha += "| ["+auxiliar.getInfo()+"]\n";
+                }
             }
             //impressão da variável pilha.
             System.out.println("\n"+pilha);
