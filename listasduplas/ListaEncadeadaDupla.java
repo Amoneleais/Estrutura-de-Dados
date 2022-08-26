@@ -37,7 +37,7 @@ public class ListaEncadeadaDupla {
         else{
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-                //em caso de elemento inexistente.
+                //em caso de lista vazia ou elemento inexistente.
                 if(auxiliar.getProx() == null && auxiliar.getInfo() != elemento){
                     System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
                     break;
@@ -95,7 +95,18 @@ public class ListaEncadeadaDupla {
                 posicao++;
                 //caso a informação do No seja igual ao elemento, retorna para o usuário o elemento, posição, anterior e sucessor.
                 if(auxiliar.getInfo() == elemento){
-                    System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx()+"]"+"\n POSICAO:   "+posicao);
+                    if(auxiliar.getProx() == null & auxiliar.getAnterior() != null){
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else if(auxiliar.getAnterior() == null & auxiliar.getProx() != null){
+                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else if(auxiliar.getAnterior() == null & auxiliar.getProx() == null){
+                        System.out.println("\n ANTERIOR: ["+null+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+null+"]"+"\n POSICAO:   "+posicao);
+                    }
+                    else{
+                        System.out.println("\n ANTERIOR: ["+auxiliar.getAnterior().getInfo()+"]\n ELEMENTO: ["+auxiliar.getInfo()+"]\n PROXIMO:  ["+auxiliar.getProx().getInfo()+"]"+"\n POSICAO:   "+posicao);
+                    }
                     break;
                 }
                 //caso o elemento não esteja inserido na lista, retorna mensagem para o usuário.
