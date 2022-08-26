@@ -1,4 +1,4 @@
-# Listas Duplamente Encadeadas
+# <b>Listas Duplamente Encadeadas</b>
 
 Implementação de Lista Duplamente Encadeada para a matéria de Estrutura de Dados
 ## O quê são?
@@ -9,7 +9,7 @@ Em ciência da computação, uma lista duplamente ligada (ou lista duplamente en
 Fonte: Wikipedia
 </a>
 
-# O que foi implementado?
+## O que foi implementado?
 
 - Nesta Lista foram implementadas as seguintes funções: 
 
