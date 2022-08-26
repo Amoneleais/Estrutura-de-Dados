@@ -17,17 +17,17 @@ Fonte: Facom
 ```python
 
 # Verificar se a lista está vazia...
-ListaVazia();
+listaVazia();
 
 # Insere um novo elemento na lista...
-Inserir();
+inserir();
 
 # Remove um elemento inserido da lista...
-Remover();
+remover();
 
 # Verifica a existência do elemento solicitado na lista...
-Buscar();
+buscar();
 
 # Imprime a lista pela ordem de inserção...
-Imprimir();
+imprimir();
 ```

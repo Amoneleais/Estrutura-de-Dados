@@ -17,20 +17,20 @@ Fonte: Wikipedia
 ```python
 
 # Verificar se a lista está vazia...
-ListaVazia();
+listaVazia();
 
 # Insere um novo elemento na lista...
-Inserir();
+inserir();
 
 # Remove um elemento inserido da lista...
-Remover();
+remover();
 
 # Esvazia totalmente a lista...
-Esvaziar();
+esvaziar();
 
 # Verifica a existência do elemento solicitado na lista, retornando o Anterior, Próximo e sua Posição na lista...
-Buscar();
+buscar();
 
 # Imprime a lista pela ordem de inserção e no sentido contrário...
-Imprimir();
+imprimir();
 ```

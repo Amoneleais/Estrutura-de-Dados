@@ -17,17 +17,17 @@ Fonte: UFRJ
 ```python
 
 # Verificar se a pilha está vazia...
-PilhaVazia();
+pilhaVazia();
 
 # Insere um novo elemento no topo da pilha...
-Push();
+push();
 
 # Remove o último elemento inserido da pilha...
-Pop();
+pop();
 
 # Esvazia totalmente a pilha...
-Esvaziar();
+esvaziar();
 
 # Imprime a pilha verticalmente...
-Imprimir();
+imprimir();
 ```
