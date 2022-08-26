@@ -23,7 +23,7 @@ public class Pilha {
     }
 
     //Insere elemento no topo da pilha |
-    public void Push(int elemento){
+    public void Push(long elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
             System.out.println("\n[ PILHA CHEIA! ]");

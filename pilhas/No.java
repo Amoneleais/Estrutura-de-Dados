@@ -4,24 +4,24 @@ package pilhas;
  */
 public class No {
 
-    private int info;
+    private long info;
     private No prox;
 
-    public No(int info) {
+    public No(long info) {
         this.info = info;
         this.prox = null;
     }
     
-    public No(int info, No prox) {
+    public No(long info, No prox) {
         this.info = info;
         this.prox = prox;
     }
 
-    public int getInfo() {
+    public long getInfo() {
         return info;
     }
     
-    public void setInfo(int info) {
+    public void setInfo(long info) {
         this.info = info;
     }
     public No getProx() {

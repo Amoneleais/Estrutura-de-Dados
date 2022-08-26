@@ -12,7 +12,7 @@ public class Main {
         
         Scanner sc = new Scanner(System.in);
         boolean i = true;
-        int elemento;
+        long elemento;
         System.out.println("\nDeseja definir um tamanho para a pilha? [y - void]");
         String confirmacao = sc.nextLine();
         Pilha pilha = new Pilha();
@@ -32,7 +32,7 @@ public class Main {
             System.out.println("");
             switch(j){
                 case 1:
-                    elemento = sc.nextInt();
+                    elemento = sc.nextLong();
                     pilha.Push(elemento);
                     break;
                 case 2:
