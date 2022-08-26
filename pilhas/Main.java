@@ -33,16 +33,16 @@ public class Main {
             switch(j){
                 case 1:
                     elemento = sc.nextLong();
-                    pilha.Push(elemento);
+                    pilha.push(elemento);
                     break;
                 case 2:
-                    pilha.Pop();
+                    pilha.pop();
                     break;
                 case 3:
-                    pilha.Imprimir();
+                    pilha.imprimir();
                     break;
                 case 4:
-                    pilha.Esvaziar();
+                    pilha.esvaziar();
                     break;
                 case 0:
                     i = false;

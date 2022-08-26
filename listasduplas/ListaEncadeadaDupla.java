@@ -12,15 +12,15 @@ public class ListaEncadeadaDupla {
     }
 
     //Verifica se a lista está vazia |
-    public boolean ListaVazia(){    
+    public boolean listaVazia(){    
         return this.ref == null;
     }
 
     //Insere Elemento na Lista Dupla |
-    public void Inserir(long elemento){
+    public void inserir(long elemento){
         No novo = new No(elemento, null,this.ref);
         //caso a lista não esteja vazia, o nó anterior da referência se tornará o nó novo.
-        if(ListaVazia() == false){
+        if(listaVazia() == false){
             this.ref.setAnterior(novo);
         }
         //referência se tornará o novo nó.
@@ -29,9 +29,9 @@ public class ListaEncadeadaDupla {
     }
 
     //Remove Elemento na Lista Dupla |
-    public void Remover(long elemento){
+    public void remover(long elemento){
         No anterior = null;
-        if(ListaVazia()){
+        if(listaVazia()){
             System.out.println("\n [ REMOVER: LISTA VAZIA! ]");
         }
         else{
@@ -76,7 +76,7 @@ public class ListaEncadeadaDupla {
     }
 
     //Esvazia a Lista Dupla |
-    public void Esvaziar(){
+    public void esvaziar(){
         //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
         this.tamanho = 0;
@@ -84,9 +84,9 @@ public class ListaEncadeadaDupla {
     }
     
     //Buscar Elemento na Lista Dupla |
-    public void Buscar(long elemento){
+    public void buscar(long elemento){
         int posicao = 0;
-        if(ListaVazia()){
+        if(listaVazia()){
             System.out.println("\n [ BUSCAR: LISTA VAZIA! ]");
         }
         //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
@@ -118,11 +118,11 @@ public class ListaEncadeadaDupla {
     }
 
     //Imprime Elementos na Lista Dupla em ambos os sentidos |
-    public void Imprimir(){
+    public void imprimir(){
         String listaVai = " ";
         String listaVolta = " ";
         //retorna mensagem para o usuário, em caso de lista vazia.
-        if(ListaVazia()){
+        if(listaVazia()){
             System.out.println("\n [ IMPRIMIR: LISTA VAZIA! ]");
         }
         else{

@@ -24,21 +24,21 @@ public class Main {
             switch(j){
                 case 1:
                     elemento = sc.nextInt();
-                    lista.Inserir(elemento);
+                    lista.inserir(elemento);
                     break;
                 case 2:
                     elemento = sc.nextInt();
-                    lista.Remover(elemento);
+                    lista.remover(elemento);
                     break;
                 case 3:
-                    lista.Imprimir();
+                    lista.imprimir();
                     break;
                 case 4:
                     elemento = sc.nextInt();
-                    lista.Buscar(elemento);
+                    lista.buscar(elemento);
                     break;
                 case 5:
-                    lista.Esvaziar();
+                    lista.esvaziar();
                     break;
                 case 0:
                     i = false;

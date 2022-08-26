@@ -11,41 +11,41 @@ public class Testes {
         ListaEncadeada Lista = new ListaEncadeada();
 
         //1 - Lista Vazia |
-        System.out.println("\nLista Vazia: "+Lista.ListaVazia());
+        System.out.println("\nLista Vazia: "+Lista.listaVazia());
 
         //2 - Utilizando Inserção |
-        Lista.Inserir(10);
-        Lista.Inserir(20);
-        Lista.Inserir(5);
-        Lista.Inserir(1);
-        Lista.Inserir(1);
-        Lista.Inserir(9);
-        Lista.Inserir(55);
-        Lista.Inserir(2590);
-        Lista.Inserir(70);
-        Lista.Inserir(30);
+        Lista.inserir(10);
+        Lista.inserir(20);
+        Lista.inserir(5);
+        Lista.inserir(1);
+        Lista.inserir(1);
+        Lista.inserir(9);
+        Lista.inserir(55);
+        Lista.inserir(2590);
+        Lista.inserir(70);
+        Lista.inserir(30);
 
         //3 - Utilizando Impressão |
-        Lista.Imprimir();
+        Lista.imprimir();
 
         //4 - Utilizando Remoção de Elementos Existentes/Inexistentes |
-        Lista.Remover(30);
-        Lista.Remover(55);
-        Lista.Remover(20);
-        Lista.Remover(32);
+        Lista.remover(30);
+        Lista.remover(55);
+        Lista.remover(20);
+        Lista.remover(32);
 
         //5 - Utilizando Impressão Após Remoção |
-        Lista.Imprimir();
+        Lista.imprimir();
 
         //6 - Utilizando Busca |
-        Lista.Buscar(200);
-        Lista.Buscar(55);
-        Lista.Buscar(70);
-        Lista.Buscar(45);
+        Lista.buscar(200);
+        Lista.buscar(55);
+        Lista.buscar(70);
+        Lista.buscar(45);
 
         //7 - Lista Vazia depois de Inserções |
         
-        System.out.println("\nLista Vazia: "+Lista.ListaVazia()+"\n");
+        System.out.println("\nLista Vazia: "+Lista.listaVazia()+"\n");
         
     }
     

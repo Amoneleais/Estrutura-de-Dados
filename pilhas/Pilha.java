@@ -18,12 +18,12 @@ public class Pilha {
     }
 
     //Verifica se a pilha está vazia |
-    public boolean PilhaVazia(){    
+    public boolean pilhaVazia(){    
         return this.topo == null;
     }
 
     //Insere elemento no topo da pilha |
-    public void Push(long elemento){
+    public void push(long elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
             System.out.println("\n[ PILHA CHEIA! ]");
@@ -36,9 +36,9 @@ public class Pilha {
     }
 
     //Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
-    public void Pop(){
+    public void pop(){
         //em caso de pilha vazia, retorna mensagem para o usuário.
-        if(PilhaVazia()){
+        if(pilhaVazia()){
             System.out.println(" [ PILHA VAZIA! ]");
         }
         //remove o elemento no topo da pilha, último inserido.
@@ -49,7 +49,7 @@ public class Pilha {
     }
 
     //Esvazia a pilha |
-    public void Esvaziar(){
+    public void esvaziar(){
         //transforma a referência em nulo, apagando os nós sucessores.
         this.topo = null;
         this.tamanho_atual = 0;
@@ -57,10 +57,10 @@ public class Pilha {
     }
 
     //Imprime os elementos na pilha |
-    public void Imprimir(){
+    public void imprimir(){
         String pilha = "";
         //retorna mensagem para o usuário, em caso de pilha vazia.
-        if(PilhaVazia()){
+        if(pilhaVazia()){
             System.out.println("\n [ PILHA VAZIA! ]");
         }
         else{
