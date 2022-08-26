@@ -37,7 +37,7 @@ public class ListaEncadeadaDupla {
         else{
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-                //em caso de lista vazia ou elemento inexistente.
+                //em caso de elemento inexistente.
                 if(auxiliar.getProx() == null && auxiliar.getInfo() != elemento){
                     System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
                     break;
