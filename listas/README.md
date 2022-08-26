@@ -1,4 +1,4 @@
-# Listas Encadeadas
+# <b>Listas Encadeadas</b>
 
 Implementação de Lista Encadeada Simples para a matéria de Estrutura de Dados
 ## O quê são?
@@ -9,7 +9,7 @@ Listas encadeadas nada mais são que uma seqüência de células ligadas ou enca
 Fonte: Facom
 </a>
 
-# O que foi implementado?
+## O que foi implementado?
 
 - Nesta Lista foram implementadas as seguintes funções: 
 
