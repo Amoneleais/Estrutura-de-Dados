@@ -11,12 +11,12 @@ public class ListaEncadeada {
         
     }
 
-    //Verifica se a lista está vazia
+    // * Verifica se a lista está vazia
     public boolean listaVazia(){    
         return this.ref == null;
     }
 
-    //Insere Elemento na Lista Encadeada
+    // * Insere Elemento na Lista Encadeada
     public void inserir(int info){
         No novo = new No(info, this.ref);
         //referência se tornará o novo nó.
@@ -24,7 +24,7 @@ public class ListaEncadeada {
         this.tamanho++;
     }
 
-    //Remove Elemento na Lista Encadeada
+    // * Remove Elemento na Lista Encadeada
     public void remover(int info){
         No anterior = null;
         //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo
@@ -54,7 +54,7 @@ public class ListaEncadeada {
         }
     }
 
-    //Esvazia a Lista |
+    // * Esvazia a Lista |
     public void esvaziar(){
         //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
@@ -62,7 +62,7 @@ public class ListaEncadeada {
         System.out.println("\n - A Lista foi Esvaziada");
     }
 
-    //Buscar Elemento na Lista Encadeada
+    // * Buscar Elemento na Lista Encadeada
     public void buscar(int info){
          //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
@@ -78,7 +78,7 @@ public class ListaEncadeada {
         }
     }
 
-    //Imprime os Elementos da Lista Encadeada
+    // * Imprime os Elementos da Lista Encadeada
     public void imprimir(){
         String lista = " ";
         //retorna mensagem para o usuário, em caso de lista vazia.

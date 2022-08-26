@@ -24,7 +24,7 @@ public class Main {
             pilha.tamanho_max = tamanho_max;
         }
 
-        //Interface simples para testes rápidos |
+        // * Interface simples para testes rápidos |
 
         while (i) {
             System.out.println("\nTESTE DE PILHA\n\n1 - PUSH\n2 - POP\n3 - IMPRIMIR\n4 - ESVAZIAR\n\n0 - FINALIZAR\n");

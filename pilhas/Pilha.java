@@ -12,17 +12,17 @@ public class Pilha {
     
     }
     
-    //Construtor para definir tamanho da pilha |
+    // * Construtor para definir tamanho da pilha |
     public Pilha(int tamanho_max){
         this.tamanho_max = tamanho_max;
     }
 
-    //Verifica se a pilha está vazia |
+    // * Verifica se a pilha está vazia |
     public boolean pilhaVazia(){    
         return this.topo == null;
     }
 
-    //Insere elemento no topo da pilha |
+    // * Insere elemento no topo da pilha |
     public void push(long elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
@@ -35,7 +35,7 @@ public class Pilha {
         }
     }
 
-    //Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
+    // * Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
     public void pop(){
         //em caso de pilha vazia, retorna mensagem para o usuário.
         if(pilhaVazia()){
@@ -48,7 +48,7 @@ public class Pilha {
         }
     }
 
-    //Esvazia a pilha |
+    // * Esvazia a pilha |
     public void esvaziar(){
         //transforma a referência em nulo, apagando os nós sucessores.
         this.topo = null;
@@ -56,7 +56,7 @@ public class Pilha {
         System.out.println("\n - A Pilha foi Esvaziada");
     }
 
-    //Imprime os elementos na pilha |
+    // * Imprime os elementos na pilha |
     public void imprimir(){
         String pilha = "";
         //retorna mensagem para o usuário, em caso de pilha vazia.

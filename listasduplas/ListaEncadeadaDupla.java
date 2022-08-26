@@ -11,12 +11,12 @@ public class ListaEncadeadaDupla {
         
     }
 
-    //Verifica se a lista está vazia |
+    // * Verifica se a lista está vazia |
     public boolean listaVazia(){    
         return this.ref == null;
     }
 
-    //Insere Elemento na Lista Dupla |
+    // * Insere Elemento na Lista Dupla |
     public void inserir(long elemento){
         No novo = new No(elemento, null,this.ref);
         //caso a lista não esteja vazia, o nó anterior da referência se tornará o nó novo.
@@ -28,7 +28,7 @@ public class ListaEncadeadaDupla {
         this.tamanho++;
     }
 
-    //Remove Elemento na Lista Dupla |
+    // * Remove Elemento na Lista Dupla |
     public void remover(long elemento){
         No anterior = null;
         if(listaVazia()){
@@ -75,7 +75,7 @@ public class ListaEncadeadaDupla {
         }
     }
 
-    //Esvazia a Lista Dupla |
+    // * Esvazia a Lista Dupla |
     public void esvaziar(){
         //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
@@ -83,7 +83,7 @@ public class ListaEncadeadaDupla {
         System.out.println("\n - A LISTA FOI ESVAZIADA");
     }
     
-    //Buscar Elemento na Lista Dupla |
+    // * Buscar Elemento na Lista Dupla |
     public void buscar(long elemento){
         int posicao = 0;
         if(listaVazia()){
@@ -117,7 +117,7 @@ public class ListaEncadeadaDupla {
         }
     }
 
-    //Imprime Elementos na Lista Dupla em ambos os sentidos |
+    // * Imprime Elementos na Lista Dupla em ambos os sentidos |
     public void imprimir(){
         String listaVai = " ";
         String listaVolta = " ";
