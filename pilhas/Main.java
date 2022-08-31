@@ -13,16 +13,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean i = true;
         long elemento;
-        System.out.println("\nDeseja definir um tamanho para a pilha? [y - void]");
-        String confirmacao = sc.nextLine();
-        Pilha pilha = new Pilha();
+        System.out.println("\nDefina o tamanho da pilha [0 == ilimitado]");
+        int tamanho = sc.nextInt();
         //Definindo tamanho de pilha |
-        if(confirmacao.equals("y")) {
-            int tamanho_max;
-            System.out.println("\nDefina o tamanho da pilha: [int]");
-            tamanho_max = sc.nextInt();
-            pilha.tamanho_max = tamanho_max;
-        }
+        Pilha pilha = new Pilha(tamanho);
 
         // * Interface simples para testes rápidos |
 

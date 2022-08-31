@@ -6,22 +6,22 @@ public class Pilha {
     
     private No topo;
     private int tamanho_atual;
-    public int tamanho_max;
+    private int tamanho_max;
 
     public Pilha(){
-    
+        
     }
     
     // * Construtor para definir tamanho da pilha |
     public Pilha(int tamanho_max){
         this.tamanho_max = tamanho_max;
     }
-
+    
     // * Verifica se a pilha está vazia |
     public boolean pilhaVazia(){    
         return this.topo == null;
     }
-
+    
     // * Insere elemento no topo da pilha |
     public void push(long elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
@@ -79,4 +79,5 @@ public class Pilha {
         }
     }
     
+
 }
