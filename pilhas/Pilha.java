@@ -67,10 +67,15 @@ public class Pilha {
             //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
             for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
                 if(auxiliar == this.topo){
-                    pilha += "| ["+auxiliar.getInfo()+"] <- TOPO\n";
+                    pilha += " ["+auxiliar.getInfo()+"] <- TOPO\n  |\n";
                 }
                 else{
-                    pilha += "| ["+auxiliar.getInfo()+"]\n";
+                    if(auxiliar.getProx()==null){
+                        pilha += " ["+auxiliar.getInfo()+"]\n";
+                    }
+                    else{
+                        pilha += " ["+auxiliar.getInfo()+"]\n  |\n";
+                    }
                 }
             }
             //impressão da variável pilha.
