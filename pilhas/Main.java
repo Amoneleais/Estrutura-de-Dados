@@ -1,6 +1,5 @@
 package pilhas;
 
-import java.security.cert.TrustAnchor;
 import java.util.Scanner;
 /**
  * Main

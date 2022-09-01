@@ -32,22 +32,8 @@ public class Pilha {
             try {
                 throw new Exception("[ PILHA CHEIA! ]");
             } catch (Exception e) {
-                Scanner sc = new Scanner(System.in);
                 e.printStackTrace();
-                System.out.println("\n Deseja aumentar o tamanho máximo da pilha e inserir o elemento? [y-n]\n");
-                String selec = sc.nextLine();
-                if(selec.equals("y")){
-                    System.out.println("");
-                    tamanho_max++;
-                }
-                else if(selec.equals("n")){
-                    System.out.println("");
-                    System.out.println("\n O elemento será descartado\n");
-                    return;
-                }
-                else{
-                    return;
-                }
+                return;
             }
         }
         this.tamanho_atual++;
