@@ -26,26 +26,32 @@ public class Pilha {
     public void push(long elemento){
         //caso haja tamanho definido e a pilha esteja cheia (quantidade de elementos = tamanho máximo).
         if(this.tamanho_atual == this.tamanho_max && tamanho_max != 0){
-            System.out.println("\n[ PILHA CHEIA! ]");
+            try {
+                throw new Exception("[ PILHA CHEIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return;
         }
-        else{
-            this.tamanho_atual++;
-            No novo = new No(elemento, this.topo);
-            this.topo = novo;
-        }
+        this.tamanho_atual++;
+        No novo = new No(elemento, this.topo);
+        this.topo = novo;
     }
 
     // * Remove elemento no topo da pilha | - Método LIFO (Last-in-First-out)
     public void pop(){
         //em caso de pilha vazia, retorna mensagem para o usuário.
         if(pilhaVazia()){
-            System.out.println(" [ PILHA VAZIA! ]");
+            try {
+                throw new Exception("[ PILHA VAZIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return;
         }
         //remove o elemento no topo da pilha, último inserido.
-        else{
-            this.topo = this.topo.getProx();
-            this.tamanho_atual--;
-        }
+        this.topo = this.topo.getProx();
+        this.tamanho_atual--;
     }
 
     // * Esvazia a pilha |
@@ -61,27 +67,25 @@ public class Pilha {
         String pilha = "";
         //retorna mensagem para o usuário, em caso de pilha vazia.
         if(pilhaVazia()){
-            System.out.println("\n [ PILHA VAZIA! ]");
-        }
-        else{
-            //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
-            for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
-                if(auxiliar == this.topo){
-                    pilha += " ["+auxiliar.getInfo()+"] <- TOPO\n  |\n";
-                }
-                else{
-                    if(auxiliar.getProx()==null){
-                        pilha += " ["+auxiliar.getInfo()+"]\n";
-                    }
-                    else{
-                        pilha += " ["+auxiliar.getInfo()+"]\n  |\n";
-                    }
-                }
+            try {
+                throw new Exception("[ PILHA VAZIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            //impressão da variável pilha.
-            System.out.println("\n"+pilha);
-            System.out.println(" - Tamanho da Pilha: "+this.tamanho_atual);
+            return;
         }
+        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
+        for(No auxiliar = this.topo; auxiliar != null; auxiliar = auxiliar.getProx()){
+            if(auxiliar == this.topo){
+                pilha += "| ["+auxiliar.getInfo()+"] <- TOPO\n";
+            }
+            else{
+                pilha += "| ["+auxiliar.getInfo()+"]\n";
+            }
+        }
+        //impressão da variável pilha.
+        System.out.println("\n"+pilha);
+        System.out.println(" - Tamanho da Pilha: "+this.tamanho_atual);
     }
     
 }
