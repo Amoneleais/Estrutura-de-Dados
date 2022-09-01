@@ -1,4 +1,7 @@
 package pilhas;
+
+import java.util.Scanner;
+
 /**
  * Pilha
  */
@@ -30,8 +33,20 @@ public class Pilha {
                 throw new Exception("[ PILHA CHEIA! ]");
             } catch (Exception e) {
                 e.printStackTrace();
+                Scanner sc = new Scanner(System.in);
+                System.out.println("\n Deseja aumentar o tamanho máximo da pilha e inserir o elemento? [y-n]\n");
+                String selec = sc.nextLine();
+                if(selec.equals("y")){
+                    tamanho_max++;
+                }
+                else if(selec.equals("n")){
+                    System.out.println("\n O elemento será descartado\n");
+                    return;
+                }
+                else{
+                    return;
+                }
             }
-            return;
         }
         this.tamanho_atual++;
         No novo = new No(elemento, this.topo);
