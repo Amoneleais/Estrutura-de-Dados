@@ -85,7 +85,7 @@ public class Pilha {
         }
         //impressão da variável pilha.
         System.out.println("\n"+pilha);
-        System.out.println(" - Tamanho da Pilha: "+this.tamanho_atual);
+        System.out.println(" - Tamanho da Pilha: "+this.tamanho_atual+"\n");
     }
     
 }
