@@ -38,12 +38,15 @@ public class Pilha {
                 String selec = sc.nextLine();
                 if(selec.equals("y")){
                     tamanho_max++;
+                    sc.close();
                 }
                 else if(selec.equals("n")){
                     System.out.println("\n O elemento será descartado\n");
+                    sc.close();
                     return;
                 }
                 else{
+                    sc.close();
                     return;
                 }
             }
