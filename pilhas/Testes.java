@@ -11,6 +11,8 @@ public class Testes {
 
         Pilha pilha01 = new Pilha();
         
+        System.out.println("\n");
+        
         // ! Utilizando o método imprimir em pilha vazia |
         pilha01.imprimir(); // ! Excessão
 
