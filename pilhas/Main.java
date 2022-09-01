@@ -1,5 +1,6 @@
 package pilhas;
 
+import java.security.cert.TrustAnchor;
 import java.util.Scanner;
 /**
  * Main
@@ -15,6 +16,7 @@ public class Main {
         long elemento;
         System.out.println("\nDefina o tamanho da pilha [0 == ilimitado]");
         int tamanho = sc.nextInt();
+
         //Definindo tamanho de pilha |
         Pilha pilha = new Pilha(tamanho);
 
@@ -22,9 +24,9 @@ public class Main {
 
         while (i) {
             System.out.println("\nTESTE DE PILHA\n\n1 - PUSH\n2 - POP\n3 - IMPRIMIR\n4 - ESVAZIAR\n\n0 - FINALIZAR\n");
-            int j = sc.nextInt();
+            int k = sc.nextInt();
             System.out.println("");
-            switch(j){
+            switch(k){
                 case 1:
                     elemento = sc.nextLong();
                     pilha.push(elemento);

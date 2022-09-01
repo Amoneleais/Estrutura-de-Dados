@@ -36,7 +36,7 @@ public class Testes {
         pilha01.imprimir();
         
         // * Instanciando a pilha em um tamanho definido |
-        Pilha pilha02 = new Pilha(5);
+        Pilha pilha02 = new Pilha(5,false);
         
         pilha02.push(7);
         pilha02.push(13);

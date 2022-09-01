@@ -16,7 +16,7 @@ public class Pilha {
     }
     
     // * Construtor para definir tamanho da pilha |
-    public Pilha(int tamanho_max){
+    public Pilha(int tamanho_max, boolean redimensionavel){
         this.tamanho_max = tamanho_max;
     }
     
