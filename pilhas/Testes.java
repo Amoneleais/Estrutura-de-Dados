@@ -11,6 +11,9 @@ public class Testes {
 
         Pilha pilha01 = new Pilha();
         
+        // ! Utilizando o método imprimir em pilha vazia |
+        pilha01.imprimir(); // ! Excessão
+
         // * Utilizando o método push para inserir elementos na pilha |
         pilha01.push(2);
         pilha01.push(4);
@@ -42,9 +45,9 @@ public class Testes {
         pilha02.imprimir();
 
         // ! Inserção em pilha "cheia" |
-        pilha02.push(51);
-        pilha02.push(25);
-        pilha02.push(18);
+        pilha02.push(51); // ! Excessão
+        pilha02.push(25); // ! Excessão
+        pilha02.push(18); // ! Excessão
         
         pilha02.imprimir();
         
