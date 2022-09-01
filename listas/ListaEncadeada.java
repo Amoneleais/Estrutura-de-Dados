@@ -27,6 +27,15 @@ public class ListaEncadeada {
     // * Remove Elemento na Lista Encadeada
     public void remover(int info){
         No anterior = null;
+        //retorna mensagem para o usuário, em caso de lista vazia.
+        if(listaVazia()){
+            try {
+                throw new Exception("[ LISTA VAZIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
+            }
+        }
         //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             //condicional, caso a info do nó atual ser igual ao elemento a ser removido.
@@ -35,20 +44,24 @@ public class ListaEncadeada {
                 if(auxiliar == this.ref){
                     this.ref = auxiliar.getProx();
                     this.tamanho--;
-                    System.out.println(" \n"+info+" removido com sucesso!");
+                    System.out.println(" \n"+info+" removido com sucesso!\n");
                     break;
                 } 
                 //caso não seja a referência.
                 else {
                     anterior.setProx(auxiliar.getProx());
-                    System.out.println(" \n"+info+" removido com sucesso!");
+                    System.out.println(" \n"+info+" removido com sucesso!\n");
                     this.tamanho--;
                     break;
                 }
             }
             //em caso de lista vazia ou elemento inexistente.
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
-                System.out.println("\n [ REMOVER: ELEMENTO NÃO EXISTENTE! ]");
+                try {
+                    throw new Exception("[ REMOVER: ELEMENTO INEXISTENTE! ]");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             anterior = auxiliar;
         }
@@ -59,21 +72,34 @@ public class ListaEncadeada {
         //transforma a referência em nulo, apagando os nós sucessores.
         this.ref = null;
         this.tamanho = 0;
-        System.out.println("\n - A Lista foi Esvaziada");
+        System.out.println("\n - A Lista foi Esvaziada\n");
     }
 
     // * Buscar Elemento na Lista Encadeada
     public void buscar(int info){
-         //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
+        //retorna mensagem para o usuário, em caso de lista vazia.
+        if(listaVazia()){
+            try {
+                throw new Exception("[ LISTA VAZIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
+            }
+        }
+        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
         for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
             if(auxiliar.getInfo() == info){
                 //caso a informação do No seja igual ao elemento, retorna que o elemento existe na lista.
-                System.out.println("\n "+info+" existente na lista!");
+                System.out.println("\n "+info+" existente na lista!\n");
                 break;
             }
             //caso o elemento não esteja inserido na lista, retorna mensagem para o usuário.
             else if(auxiliar.getProx() == null & auxiliar.getInfo() != info){
-                System.out.println("\n [ BUSCAR: ELEMENTO NÃO EXISTENTE! ]");
+                try {
+                    throw new Exception("[ BUSCAR: ELEMENTO INEXISTENTE! ]");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -83,17 +109,20 @@ public class ListaEncadeada {
         String lista = " ";
         //retorna mensagem para o usuário, em caso de lista vazia.
         if(listaVazia()){
-            System.out.println("\n [ LISTA VAZIA! ]");
-        }
-        else{
-            //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
-            for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
-                lista += "["+auxiliar.getInfo()+"] ";
+            try {
+                throw new Exception("[ LISTA VAZIA! ]");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
             }
-            //impressão da variável lista.
-            System.out.println("\n"+lista);
-            System.out.println(" Tamanho da Lista: "+this.tamanho);
         }
+        //percorre os nós, por meio de uma variável auxiliar do tipo No até encontrar o nulo.
+        for(No auxiliar = this.ref; auxiliar != null; auxiliar = auxiliar.getProx()){
+            lista += "["+auxiliar.getInfo()+"] ";
+        }
+        //impressão da variável lista.
+        System.out.println("\n"+lista);
+        System.out.println(" Tamanho da Lista: "+this.tamanho+"\n");
     }
     
 }
