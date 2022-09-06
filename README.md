@@ -22,7 +22,7 @@ Lista Duplamente Encadeada - 100%
 Pilha - 100%
 ```
 ```
-Fila - 0%
+Fila - 50%
 ```
 ```
 Árvore - 0%
