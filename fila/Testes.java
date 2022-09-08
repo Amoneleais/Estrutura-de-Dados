@@ -31,5 +31,10 @@ public class Testes {
         fila.enqueue(random.nextLong(1000));
 
         fila.imprimir();
+
+        fila.dequeue();
+        fila.dequeue();
+
+        fila.imprimir();
     }
 }
