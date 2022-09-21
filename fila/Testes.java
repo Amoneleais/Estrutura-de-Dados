@@ -5,7 +5,7 @@ package fila;
 public class Testes {
     public static void main(String[] args) {
         
-        Fila fila = new Fila();
+        FilaLista fila = new FilaLista();
         
         // * Utilizando o método enqueue para inserir elementos na fila | 
         fila.enqueue(2);

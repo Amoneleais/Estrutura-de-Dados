@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        Fila fila = new Fila();
+        FilaLista fila = new FilaLista();
         boolean i = true;
         int elemento;
 

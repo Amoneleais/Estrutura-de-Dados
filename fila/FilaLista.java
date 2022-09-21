@@ -1,11 +1,11 @@
 package fila;
 
-public class Fila {
+public class FilaLista {
     
     private No inicio, fim;
     private int tamanho;
 
-    public Fila(){
+    public FilaLista(){
         this.inicio = this.fim = null;
     }
 
