@@ -38,7 +38,6 @@ public class Fila {
             }
             return;
         }
-        No auxiliar = this.inicio;
         this.inicio = this.inicio.getProx();
         if(this.inicio == null){
             this.fim = null;
