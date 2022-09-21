@@ -40,8 +40,5 @@ public class Arvore {
             }
         }
     }
-
-    public void buscar(long elemento){
-
-    }
+    
 }

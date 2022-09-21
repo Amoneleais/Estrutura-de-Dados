@@ -22,10 +22,10 @@ Lista Duplamente Encadeada - 100%
 Pilha - 100%
 ```
 ```
-Fila - 50%
+Fila - 100%
 ```
 ```
-Árvore - 0%
+Árvore - 20%
 ```
 ```
 Árvore BST - 0%

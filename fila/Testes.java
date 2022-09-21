@@ -1,39 +1,43 @@
 package fila;
-
-import java.util.Random;
-
+/**
+ * No
+ */
 public class Testes {
     public static void main(String[] args) {
         
-        Random random = new Random();
         Fila fila = new Fila();
         
         // * Utilizando o método enqueue para inserir elementos na fila | 
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
+        fila.enqueue(2);
+        fila.enqueue(125);
+        fila.enqueue(40);
+        fila.enqueue(65);
+        fila.enqueue(499);
         
         // * Imprimindo a fila com o método imprimir |
         fila.imprimir();
 
-        // * Removendo o elemento mais antigo da fila com o método dequeue |
+        // * Utilizando o método dequeue para remover o elemento mais antigo na fila |
         fila.dequeue();
         fila.dequeue();
         fila.dequeue();
-        
-        fila.imprimir();
-
-        // * Inserção após esvaziar a pilha |
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
-        fila.enqueue(random.nextLong(1000));
 
         fila.imprimir();
 
+        // * Removendo todos os elementos |
         fila.dequeue();
         fila.dequeue();
+
+        // ! Tentando remover elementos em fila vazia |
+        fila.dequeue();
+
+        fila.imprimir();
+
+        // * Reiserindo após esvaziar |
+        fila.enqueue(39);
+        fila.enqueue(58);
+        fila.enqueue(34);
+        fila.enqueue(66);
 
         fila.imprimir();
     }

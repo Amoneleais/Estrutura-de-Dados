@@ -12,8 +12,7 @@ public class Testes {
         arvore.inserir(30);
         arvore.inserir(25);
         arvore.inserir(60);
-
-        arvore.buscar(30);
+    
         
     }
 }

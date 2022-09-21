@@ -27,4 +27,7 @@ dequeue();
 
 # Imprime a fila verticalmente...
 imprimir();
+
+# Esvazia totalmente a fila...
+esvaziar();
 ```

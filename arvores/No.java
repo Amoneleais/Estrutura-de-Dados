@@ -5,8 +5,7 @@ package arvores;
 public class No {
 
     private long info;
-    private No esquerdo;
-    private No direito;
+    private No esquerdo, direito;
     
     public No(long info){
         this.info = info;
