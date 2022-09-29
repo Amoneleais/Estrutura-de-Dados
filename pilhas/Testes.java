@@ -11,7 +11,7 @@ public class Testes {
      */
     public static void main(String[] args) {
         
-
+/*
         Pilha pilha01 = new Pilha();
         Random random = new Random();
         
@@ -61,6 +61,6 @@ public class Testes {
         pilha02.pop();
         
         pilha02.imprimir();
-
+*/
     }    
 }
