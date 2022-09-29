@@ -1,7 +1,4 @@
 package pilhas;
-
-import java.util.Random;
-
 /**
  * Testes
  */
