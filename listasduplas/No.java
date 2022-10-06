@@ -5,8 +5,7 @@ package listasduplas;
 public class No {
     
     private long info;
-    private No anterior;
-    private No prox;
+    private No anterior, prox;
 
     public No(long info){
         this.info = info;
